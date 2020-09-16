@@ -1,4 +1,5 @@
-# berry-personal-website
+# Berry Personal Website
+Built with Nuxt.js and Tailwind CSS
 
 ## Build Setup
 
