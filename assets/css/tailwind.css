@@ -1,0 +1,44 @@
+@tailwind base;
+body{
+    @apply font-light;
+    @apply font-font3;
+    @apply text-xl;
+}
+p{
+    @apply mb-5;
+}
+a {
+    color: theme('colors.violet');
+    @apply transition-all duration-200 ease-linear;
+}
+
+a:hover {
+    color: theme('colors.lime');
+}
+
+#page-header-socials svg{
+    fill: theme('colors.lime');
+    max-width: 100%;
+    height: auto;
+}
+
+.berry-title{
+    @apply font-exo2;
+    @apply font-medium;
+    @apply leading-none;
+    @apply text-lime;
+}
+
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .text-shadow {
+        text-shadow: 4px 4px 1px theme('colors.violet');
+    }
+
+    .bg-overlay {
+        background: rgba(0, 0, 0, 0.95);
+        background: linear-gradient(90deg, theme('colors.black') 50%, theme('colors["black-rgba-75"]') 100%);
+    }
+}
