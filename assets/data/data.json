@@ -1,0 +1,11 @@
+{
+    "socialsLinks": {
+        "twitter": "https://twitter.com/andreaberardi82",
+        "linkedin": "https://www.linkedin.com/in/andrea-berardi/"
+    },
+
+    "footerLinks": {
+        "nuxt": "https://www.nuxtjs.org/",
+        "tailwind": "https://tailwindcss.com/"
+    }
+}
