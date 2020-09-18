@@ -1,34 +1,4 @@
 @tailwind base;
-body{
-    @apply font-light;
-    @apply font-font3;
-    @apply text-xl;
-}
-p{
-    @apply mb-5;
-}
-a {
-    color: theme('colors.violet');
-    @apply transition-all duration-200 ease-linear;
-}
-
-a:hover {
-    color: theme('colors.lime');
-}
-
-#page-header-socials svg{
-    fill: theme('colors.lime');
-    max-width: 100%;
-    height: auto;
-}
-
-.berry-title{
-    @apply font-exo2;
-    @apply font-medium;
-    @apply leading-none;
-    @apply text-lime;
-}
-
 @tailwind components;
 @tailwind utilities;
 
@@ -41,4 +11,100 @@ a:hover {
         background: rgba(0, 0, 0, 0.95);
         background: linear-gradient(90deg, theme('colors.black') 50%, theme('colors["black-rgba-75"]') 100%);
     }
+}
+
+
+
+body{
+    @apply font-light;
+    @apply font-exo2;
+    @apply text-lg;
+
+    /* @apply font-font10; */
+}
+
+p{
+    @apply mb-5;
+}
+
+article a{
+    color: theme('colors.violet');
+    @apply transition-all duration-200 ease-linear;
+    @apply pb-1;
+    @apply border-b-4;
+    @apply border-lime;
+}
+
+article a:hover {
+    color: theme('colors.lime');
+    @apply border-violet;
+}
+
+#page-header-socials svg{
+    fill: theme('colors.lime');
+    max-width: 100%;
+    height: auto;
+}
+
+.berry-title{
+    @apply font-exo2;
+    @apply font-semibold;
+    @apply leading-berry;
+    @apply text-white;
+    @apply border-l-8;
+    @apply border-violet;
+    @apply pl-4;
+
+    /* @apply font-font11; */
+}
+
+.berry-hero{
+    @apply font-exo2;
+    @apply font-font11;
+    @apply font-medium;
+    @apply leading-berry;
+    @apply text-lime;
+}
+
+.heading--title{
+    @apply mb-4;
+}
+
+/*
+	Page transitions: fade-in-up
+*/
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1
+  }
+}
+
+.fade-in-up-leave-to {
+  opacity: 0.75;
+  transition: opacity .3s;
+}
+
+.fade-in-up-enter {
+  opacity: 0.75;
+  transform: translate3d(0, 20px, 0);
+}
+
+.fade-in-up-enter-to {
+  opacity: 0.75;
+  animation-duration: .75s;
+  animation-fill-mode: both;
+  animation-name: fadeInUp;
+}
+
+.hljs{
+    @apply py-8 !important;
+    @apply px-8 !important;
+    @apply my-8;
+    @apply text-sm;
+    @apply font-fontmono;
 }

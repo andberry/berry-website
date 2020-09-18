@@ -10,7 +10,10 @@ module.exports = {
             petrol: '#005F6A',
             lime: '#b0ed60',
             violet: '#7C48FF',
+            purple: '#6b46c1',
+            purple2: '#553c9a',
             white: '#FFFFFF',
+            graylight: '#CCCCCC',
             gray: '#858585',
 
             black: '#272727',
@@ -24,18 +27,23 @@ module.exports = {
             font1: ['Rubik', 'sans-serif'],
             font2: ['Ubuntu', 'sans-serif'],
             font3: ['Roboto Slab', 'serif'],
-            font6: ['Montserrat', 'sans-serif']
+            font6: ['Montserrat', 'sans-serif'],
+            font7: ['Lato', 'sans-serif'],
+            fontmono: ['"Courier Prime"', 'monospace'],
+
+            font10: ['Crimson Text', 'serif'],
+            font11: ['Montserrat', 'sans-serif'],
         },
 
         extend: {
             fontSize: {
                 hero1: '2vw',
                 hero2: '5vw',
-                hero3: '8vw'
+                huge: '14vw'
             },
 
             lineHeight: {
-                berry: 0.9
+                berry: 0.95
             }
         }
     },

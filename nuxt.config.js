@@ -27,20 +27,25 @@ export default {
             { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;700&display=swap' },
             { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700;800;900&display=swap' },
             { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Roboto+Slab:wght@300&display=swap' },
-            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;500;600;700&display=swap' }
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;500;600;700&display=swap' },
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap' },
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap' },
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap' },
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap' },
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap' }
         ]
     },
     /*
     ** Global CSS
     */
     css: [
+        'highlight.js/styles/atom-one-dark.css'
     ],
     /*
     ** Plugins to load before mounting the App
     ** https://nuxtjs.org/guide/plugins
     */
-    plugins: [
-    ],
+    plugins: [],
     /*
     ** Auto import components
     ** See https://nuxtjs.org/api/configuration-components
@@ -84,5 +89,20 @@ export default {
                 }
             }
         }
+    },
+
+    pageTransition: {
+        // name: 'page',
+        // name: 'slide',
+        // name: 'zoom',
+        name: 'fade-in-up',
+        mode: 'out-in'
     }
+
+    /*
+    layoutTransition: {
+        name: 'fade-in-up',
+        mode: 'out-in'
+    }
+    */
 }
