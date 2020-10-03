@@ -3,9 +3,23 @@
         <h1 class="berry-title text-hero2 mb-24">
             How to create your first VPS on DigitalOcean
         </h1>
+
         <h2 class="berry-title text-5xl heading--title">
             Heading level 2
         </h2>
+
+        <p>In this post I want to guide you through the process of setting up your first Linux Virtual Private Server (VPS) on DigitalOcean.
+        </p>
+
+        <p>DigitalOcean is one of the most famous VPS services.</p>
+
+        <p>
+        DigitalOcean has a 1-click installation process for the most famous applictions and operating systems, it provides a global network of data centers and CDN locations. It’s also very reliable and with a 5$/m starting point it’s also convenient.
+        </p>
+
+        <p>
+        I consider DigitalOcean to be one of the most affordable and easy to use solutions, and I use it for various services.
+        </p>
 
         <pre><code data-language="javascript">import hljs from 'highlight.js/lib/core'
 import javascript from 'highlight.js/lib/languages/javascript'
