@@ -1,9 +1,10 @@
 <template>
     <div id="page">
         <PageHeader />
-        <main id="main" class="lg:h-screen min-h-screen lg:min-h-0 flex items-center bg-black text-white">
-            <!-- <div class="main__overlay absolute top-0 left-0 w-full h-full z-0"></div> -->
-            <Nuxt />
+        <main id="main" class="h-screen flex items-center px-4 bg-black text-white">
+            <div class="w-full">
+                <Nuxt />
+            </div>
         </main>
         <PageFooter
             :isSticky="true"

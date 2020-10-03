@@ -6,6 +6,13 @@
 */
 module.exports = {
     theme: {
+        screens: {
+            sm: '640px',
+            md: '768px',
+            lg: '1024px',
+            xl: '1280px',
+            '2xl': '1440px'
+        },
         colors: {
             petrol: '#005F6A',
             lime: '#b0ed60',
@@ -19,7 +26,8 @@ module.exports = {
             black: '#272727',
             'black-rgba-75': 'rgba(39, 39, 39, 0.75)',
             black2: '#333',
-            red: '#FB0E1A'
+            red: '#FB0E1A',
+            transparent: 'rgba(0,0,0,0)'
         },
 
         fontFamily: {
@@ -32,13 +40,18 @@ module.exports = {
             fontmono: ['"Courier Prime"', 'monospace'],
 
             font10: ['Crimson Text', 'serif'],
-            font11: ['Montserrat', 'sans-serif'],
+            font11: ['Montserrat', 'sans-serif']
+        },
+
+        transitionTimingFunction: {
+            linear: 'linear',
+            def: 'cubic-bezier(0.390, 0.575, 0.565, 1.000)'
         },
 
         extend: {
             fontSize: {
                 hero1: '2vw',
-                hero2: '5vw',
+                hero2: '6vw',
                 huge: '14vw'
             },
 

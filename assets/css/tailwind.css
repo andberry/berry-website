@@ -24,24 +24,41 @@ body{
 }
 
 p{
-    @apply mb-5;
+    @apply mb-3;
 }
 
 article a{
-    color: theme('colors.violet');
+    color: theme('colors.lime');
     @apply transition-all duration-200 ease-linear;
     @apply pb-1;
     @apply border-b-4;
     @apply border-lime;
+    position: relative;
+
+    &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -4px;
+        left: 0px;
+        width: 0%;
+        height: 4px;
+        background-color: theme('colors.violet');
+        transition: all 250ms theme('transitionTimingFunction.def');
+        /* transition: all 250ms cubic-bezier(0.390, 0.575, 0.565, 1.000; */
+    }
 }
 
 article a:hover {
-    color: theme('colors.lime');
+    /* color: theme('colors.violet'); */
     @apply border-violet;
+
+    &:after{
+        width: 100%;
+    }
 }
 
-#page-header-socials svg{
-    fill: theme('colors.lime');
+svg{
     max-width: 100%;
     height: auto;
 }
@@ -60,14 +77,18 @@ article a:hover {
 
 .berry-hero{
     @apply font-exo2;
-    @apply font-font11;
-    @apply font-medium;
+    @apply font-semibold;
     @apply leading-berry;
     @apply text-lime;
 }
 
 .heading--title{
     @apply mb-4;
+}
+
+#main-menu a:hover{
+    @apply text-lime;
+    @apply transition-all duration-200 ease-linear;
 }
 
 /*
@@ -83,7 +104,31 @@ article a:hover {
     opacity: 1
   }
 }
+.fade-in-up-leave-active,
+.fade-in-up-enter-active{
+    transition: transform 450ms cubic-bezier(0.390, 0.575, 0.565, 1.000) 0ms, opacity 450ms linear 100ms;
+}
 
+.fade-in-up-leave{
+    opacity: 1;
+    transform: translateY(0px);
+
+}
+.fade-in-up-leave-to{
+    opacity: 0;
+    transform: translateY(60px);
+
+}
+
+.fade-in-up-enter{
+    opacity: 0;
+    transform: translateY(30px);
+}
+.fade-in-up-enter-to{
+    opacity: 1;
+    transform: translateY(0px);
+}
+/*
 .fade-in-up-leave-to {
   opacity: 0.75;
   transition: opacity .3s;
@@ -100,6 +145,7 @@ article a:hover {
   animation-fill-mode: both;
   animation-name: fadeInUp;
 }
+*/
 
 .hljs{
     @apply py-8 !important;
@@ -107,4 +153,23 @@ article a:hover {
     @apply my-8;
     @apply text-sm;
     @apply font-fontmono;
+}
+
+
+/*
+    Skills
+*/
+.skill{
+    @apply rounded rounded-md text-white inline-flex items-center justify-center py-1 text-xs leading-tight text-center;
+}
+.skill__1{
+    @apply bg-purple2;
+}
+
+.skill__2{
+    @apply bg-petrol;
+}
+
+.skill__3{
+    @apply bg-purple;
 }
