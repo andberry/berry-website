@@ -26,25 +26,31 @@
         </div>
 
         <div id="page-header-socials" class="header__socials flex relative z-40">
-            <div class="social social--twitter w-6 mr-4">
+            <div class="social social--twitter w-8 mr-4">
                 <a :href="data.socialsLinks.twitter" target="_blank"><twitterIcon /></a>
             </div>
 
-            <div class="social social--linkedin w-6">
+            <div class="social social--linkedin w-8 mr-4">
                 <a :href="data.socialsLinks.linkedin" target="_blank"><linkedinIcon /></a>
+            </div>
+
+            <div class="social social--github w-8">
+                <a :href="data.socialsLinks.github" target="_blank"><githubIcon /></a>
             </div>
         </div>
     </header>
 </template>
 <script>
 import data from '~/assets/data/data.json'
-import twitterIcon from '~/assets/images/twitter.svg?inline'
+import twitterIcon from '~/assets/images/twitter1.svg?inline'
 import linkedinIcon from '~/assets/images/linkedin.svg?inline'
+import githubIcon from '~/assets/images/github.svg?inline'
 
 export default {
     components: {
         twitterIcon,
-        linkedinIcon
+        linkedinIcon,
+        githubIcon
     },
 
     data () {
@@ -55,11 +61,12 @@ export default {
 }
 </script>
 
-<style>
-    .social svg{
+<style scoped>
+    svg{
         fill: theme('colors.white');
+        @apply transition-all duration-200 ease-linear;
     }
-    .social svg:hover{
+    svg:hover{
         fill: theme('colors.lime');
     }
 </style>
