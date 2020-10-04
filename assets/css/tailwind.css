@@ -18,7 +18,7 @@
 body{
     @apply font-light;
     @apply font-exo2;
-    @apply text-lg;
+    /* @apply text-lg; */
 
     /* @apply font-font10; */
 }
@@ -172,4 +172,25 @@ svg{
 
 .skill__3{
     @apply bg-purple;
+}
+
+.skills-block{
+    @apply px-4 mb-8;
+}
+
+.skills-block .block__inner{
+    @apply border-l border-lime p-4 pt-1 h-full;
+}
+
+.skills-block .block__title{
+    @apply text-2xl font-bold mb-3 leading-none;
+}
+
+.skills-block ul{
+    list-style-type: disc;
+    @apply ml-6;
+}
+
+.skills-block li{
+    @apply pt-1 pb-1 leading-tight;
 }

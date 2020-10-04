@@ -1,6 +1,6 @@
 <template>
     <article class="container mx-auto max-w-screen-md">
-        <h1 class="berry-title text-hero2 mb-24">
+        <h1 class="berry-title text-5xl lg:text-hero2 mb-24">
             How to create your first VPS on DigitalOcean
         </h1>
 

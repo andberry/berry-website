@@ -1,10 +1,10 @@
 <template>
     <header id="page__header" class="fixed top-0 left-0 w-full h:8 lg:h-16 px-4 py-2 lg:py-0 flex items-center justify-between bg-purple2 text-white text-sm">
         <div class="flex items-center">
-            <div class="header__logo mr-8 relative z-40">
+            <div class="header__logo mr-4 relative z-40">
                 <img src="~/assets/images/berry_twitter.jpg" alt="Berry Image" class="rounded-full w-10 lg:w-12">
             </div>
-            <nav id="main-menu" class="header__nav fixed inset-0 lg:static flex items-center bg-black lg:bg-transparent z-40">
+            <nav id="main-menu" class="hiddenn header__nav fixed inset-0 lg:static flex items-center bg-black lg:bg-transparent z-40">
                 <ul class="lg:flex w-full text-center lg:text-left text-lg lg:text-base">
                     <li class="py-2 lg:py-0 px-4">
                         <nuxt-link to="/">
