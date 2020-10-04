@@ -23,18 +23,18 @@
         </div>
 
         <div class="skills hidden lg:grid w-4/12 mt-16 lg:mt-0 grid-cols-4 grid-rows-8 gap-3 lg:pl-4">
-            <span class="skill skill__1 col-start-1 col-end-2 row-start-1 row-end-2">HTML</span>
+            <span class="skill skill__3 col-start-1 col-end-2 row-start-1 row-end-2">HTML</span>
             <span class="skill skill__1 col-start-2 col-end-3 row-start-2 row-end-3">CSS<br>Sass/SCSS</span>
-            <span class="skill skill__1 col-start-2 col-end-3 row-start-3 row-end-4">BEM,<br>SMACSS, ITCSS</span>
-            <span class="skill skill__1 col-start-1 col-end-2 row-start-3 row-end-4">Tailwind<br>CSS</span>
+            <span class="skill skill__2 col-start-2 col-end-3 row-start-3 row-end-4">BEM,<br>SMACSS, ITCSS</span>
+            <span class="skill skill__1 col-start-1 col-end-2 row-start-4 row-end-5">Tailwind<br>CSS</span>
             <span class="skill skill__2 col-start-3 col-end-4 row-start-1 row-end-2">Javascript<br>ES6+</span>
             <span class="skill skill__3 col-start-3 col-end-4 row-start-5 row-end-6">Foundation<br>Bootstrap</span>
-            <span class="skill skill__2 col-start-4 col-end-5 row-start-2 row-end-3">Vue.js</span>
-            <span class="skill skill__2 col-start-4 col-end-5 row-start-3 row-end-4">Nuxt.js</span>
-            <span class="skill skill__3 col-start-2 col-end-3 row-start-7 row-end-8">WordPress</span>
-            <span class="skill skill__2 col-start-2 col-end-3 row-start-6 row-end-7">PHP</span>
-            <span class="skill skill__2 col-start-1 col-end-2 row-start-6 row-end-7">Twig</span>
-            <span class="skill skill__2 col-start-4 col-end-5 row-start-6 row-end-7">Python</span>
+            <span class="skill skill__1 col-start-4 col-end-5 row-start-3 row-end-4">Vue.js</span>
+            <span class="skill skill__2 col-start-4 col-end-5 row-start-4 row-end-5">Nuxt.js</span>
+            <span class="skill skill__2 col-start-2 col-end-3 row-start-7 row-end-8">WordPress</span>
+            <span class="skill skill__3 col-start-2 col-end-3 row-start-6 row-end-7">PHP</span>
+            <span class="skill skill__3 col-start-1 col-end-2 row-start-6 row-end-7">Twig</span>
+            <span class="skill skill__1 col-start-4 col-end-5 row-start-6 row-end-7">Python</span>
             <span class="skill skill__2 col-start-4 col-end-5 row-start-7 row-end-8">Django</span>
         </div>
 

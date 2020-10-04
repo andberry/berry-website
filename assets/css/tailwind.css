@@ -160,18 +160,19 @@ svg{
     Skills
 */
 .skill{
-    @apply rounded rounded-md text-white inline-flex items-center justify-center py-1 text-xs leading-tight text-center;
+    @apply rounded-sm text-white inline-flex items-center justify-center py-1 text-xs leading-tight text-center;
 }
+
 .skill__1{
-    @apply bg-purple2;
+    @apply bg-violet;
 }
 
 .skill__2{
-    @apply bg-petrol;
+    @apply bg-lime text-black;
 }
 
 .skill__3{
-    @apply bg-purple;
+    @apply bg-purple2;
 }
 
 .skills-block{
