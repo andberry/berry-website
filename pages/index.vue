@@ -1,6 +1,5 @@
 <template>
     <article class="container mx-auto lg:flex lg:items-center lg:justify-between text-center lg:text-left">
-
         <div class="intro w-full lg:w-8/12 lg:pr-4 lg:flex items-start">
             <div class="intro__image w-full lg:w-2/12 lg:pr-4">
                 <img :src="images.intro.src" :alt="images.intro.alt" class="inline-block rounded-full w-1/3 mb-4 lg:mb-0 lg:w-full">
@@ -37,7 +36,6 @@
             <span class="skill skill__1 col-start-4 col-end-5 row-start-6 row-end-7">Python</span>
             <span class="skill skill__2 col-start-4 col-end-5 row-start-7 row-end-8">Django</span>
         </div>
-
     </article>
 </template>
 

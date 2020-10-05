@@ -5,11 +5,15 @@
         </h1>
 
         <section>
-            <h2 class="berry-title text-2xl lg:text-hero1 mb-4 lg:mb-8">Tech Skills</h2>
+            <h2 class="berry-title text-2xl lg:text-hero1 mb-4 lg:mb-8">
+                Tech Skills
+            </h2>
             <div class="flex flex-wrap -mx-4">
                 <div class="skills-block w-full lg:w-3/12">
                     <div class="block__inner">
-                        <h3 class="block__title">Languages</h3>
+                        <h3 class="block__title">
+                            Languages
+                        </h3>
                         <ul>
                             <li>HTML5</li>
                             <li>CSS3, Sass/SCSS</li>
@@ -22,7 +26,9 @@
 
                 <div class="skills-block w-full lg:w-3/12">
                     <div class="block__inner">
-                        <h3 class="block__title">CSS Frameworks</h3>
+                        <h3 class="block__title">
+                            CSS Frameworks
+                        </h3>
                         <ul>
                             <li>Foundation</li>
                             <li>Bootstrap</li>
@@ -33,7 +39,9 @@
 
                 <div class="skills-block w-full lg:w-3/12">
                     <div class="block__inner">
-                        <h3 class="block__title">Libraries</h3>
+                        <h3 class="block__title">
+                            Libraries
+                        </h3>
                         <ul>
                             <li>jQuery</li>
                             <li>Vue.js</li>
@@ -44,7 +52,9 @@
 
                 <div class="skills-block w-full lg:w-3/12">
                     <div class="block__inner">
-                        <h3 class="block__title">CMS and Frameworks</h3>
+                        <h3 class="block__title">
+                            CMS and Frameworks
+                        </h3>
                         <ul>
                             <li>WordPress</li>
                             <li>Drupal</li>
@@ -57,7 +67,9 @@
 
                 <div class="skills-block w-full lg:w-3/12">
                     <div class="block__inner">
-                        <h3 class="block__title">Dev tools</h3>
+                        <h3 class="block__title">
+                            Dev tools
+                        </h3>
                         <ul>
                             <li>Git</li>
                             <li>gulp.js</li>
@@ -71,7 +83,9 @@
 
                 <div class="skills-block w-full lg:w-3/12">
                     <div class="block__inner">
-                        <h3 class="block__title">Best pratices</h3>
+                        <h3 class="block__title">
+                            Best pratices
+                        </h3>
                         <ul>
                             <li>Responsive web design</li>
                             <li>Usability</li>
@@ -82,7 +96,9 @@
 
                 <div class="skills-block w-full lg:w-3/12">
                     <div class="block__inner">
-                        <h3 class="block__title">Sysadmin/OS</h3>
+                        <h3 class="block__title">
+                            Sysadmin/OS
+                        </h3>
                         <ul>
                             <li>macOS</li>
                             <li>Linux</li>
@@ -95,7 +111,9 @@
         </section>
 
         <section class="mt-16">
-            <h2 class="berry-title text-2xl lg:text-hero1 mb-4 lg:mb-8">Soft Skills</h2>
+            <h2 class="berry-title text-2xl lg:text-hero1 mb-4 lg:mb-8">
+                Soft Skills
+            </h2>
             <div class="flex flex-wrap -mx-4">
                 <div class="skills-block">
                     <div class="block__inner">
@@ -109,6 +127,5 @@
                 </div>
             </div>
         </section>
-
     </article>
 </template>
