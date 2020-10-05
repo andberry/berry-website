@@ -1,3 +1,4 @@
+
 <template>
     <header id="page__header" class="fixed top-0 left-0 w-full h:8 lg:h-16 px-4 py-2 lg:py-0 flex items-center justify-between bg-purple2 text-white text-sm">
         <div class="flex items-center">
@@ -17,8 +18,8 @@
                         </nuxt-link>
                     </li>
                     <li class="py-2 lg:py-0 px-4">
-                        <nuxt-link to="/styleguide">
-                            Style Guide
+                        <nuxt-link to="/blog">
+                            Blog
                         </nuxt-link>
                     </li>
                 </ul>
