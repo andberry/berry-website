@@ -18,8 +18,7 @@
 body{
     @apply font-light;
     @apply font-exo2;
-    /* @apply text-lg; */
-
+    @apply text-lg;
     /* @apply font-font10; */
 }
 
@@ -63,6 +62,11 @@ svg{
     height: auto;
 }
 
+
+
+/*
+    Titles / Typography
+*/
 .berry-title{
     @apply font-exo2;
     @apply font-semibold;
@@ -71,8 +75,6 @@ svg{
     @apply border-l-8;
     @apply border-violet;
     @apply pl-4;
-
-    /* @apply font-font11; */
 }
 
 .berry-hero{
@@ -86,10 +88,34 @@ svg{
     @apply mb-4;
 }
 
+/* Default page title */
+.page-title{
+    @apply berry-title text-6xl;
+}
+
+@screen lg{
+    .page-title{
+        @apply text-hero2;
+    }
+}
+
+
+.nuxt-content h2,
+.nuxt-content h3{
+    @apply berry-title;
+}
+
+
+
+/*
+    Menu
+*/
 #main-menu a:hover{
     @apply text-lime;
     @apply transition-all duration-200 ease-linear;
 }
+
+
 
 /*
 	Page transitions: fade-in-up
@@ -150,7 +176,7 @@ svg{
 .hljs{
     @apply py-8 !important;
     @apply px-8 !important;
-    @apply my-8;
+    @apply mt-2 mb-8;
     @apply text-sm;
     @apply font-fontmono;
 }
