@@ -2,8 +2,8 @@
 title: My First Post
 description: 'This @nuxt/content module is really great!'
 abstract: 'Abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-createdAt: '20200926'
-createdAtDisplay: 'September 26, 2020'
+createdAt: 20200916
+createdAtDisplay: 'September 16, 2020'
 ---
 
 # Berry h1

@@ -1,9 +1,14 @@
 ---
-title: Centering Things in CSS
+title: 'Centering Things in CSS'
 abstract: 'Yet another article about different ways to center things in CSS: position absolute + translate, Flexbox, CSS Grid'
-createdAt: '20201002'
+createdAt: 20201002
 createdAtDisplay: 'October 2, 2020'
 ---
+As usual, as web developers, we have different ways to do the same thing, and centering object is a topic we face on daily basis. Fortunately we've moved from the prehistoric age of tables and float and today we can easily get support from standardized useful technologies that dramatically simplifies our job.
+
+Yes, I'm talking about tranform properties and Flexbox and Grid CSS mmodules.
+
+
 ## Position absolute + translate
 <pre><code data-language="css">
 .container{
