@@ -105,7 +105,8 @@ export default {
     },
 
     layoutTransition: {
-        name: 'fade-in-up',
+        name: 'fade',
+        // name: 'fade-in-up-layout',
         mode: 'out-in'
     }
 }

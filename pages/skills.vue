@@ -1,5 +1,5 @@
 <template>
-    <article class="container mx-auto">
+    <article class="container mx-auto max-w-scr">
         <h1 class="berry-title text-5xl lg:text-hero2 mb-12">
             My Skills
         </h1>

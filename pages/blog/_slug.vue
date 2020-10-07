@@ -1,10 +1,10 @@
 <template>
     <article class="container mx-auto max-w-screen-md">
-        <h1 class="page-title mb-16 lg:mb-32">
+        <h1 class="page-title mb-4">
             {{ post.title }}
         </h1>
 
-        <h3 class="post__createdat mb-4">
+        <h3 class="post__createdat mb-16 text-sm">
             {{ post.createdAtDisplay }}
         </h3>
 
@@ -30,5 +30,9 @@ export default {
 </script>
 
 <style>
-
+    .nuxt-content h1,
+    .nuxt-content h2,
+    .nuxt-content h3{
+        @apply mt-16 mb-4;
+    }
 </style>
