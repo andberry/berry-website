@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.5.0",
+    "gsap": "^3.5.1",
     "highlight.js": "^10.2.0",
     "nuxt": "^2.14.0"
   },

@@ -10,6 +10,7 @@
                     Hello!
                     <br>
                     I'm <span class="text-violet">Berry</span>.
+                    <div class="mask"></div>
                 </h1>
                 <div class="mt-3">
                     <p>I'm a <span class="text-violet">Web Developer</span> located in Brescia (Italy).</p>
@@ -21,7 +22,7 @@
             </div>
         </div>
 
-        <div class="skills hidden lg:grid w-4/12 mt-16 lg:mt-0 grid-cols-4 grid-rows-8 gap-3 lg:pl-4">
+        <div id="skills" class="skills hidden lg:grid w-4/12 mt-16 lg:mt-0 grid-cols-4 grid-rows-8 gap-3 lg:pl-4">
             <span class="skill skill__3 col-start-1 col-end-2 row-start-1 row-end-2">HTML</span>
             <span class="skill skill__1 col-start-2 col-end-3 row-start-2 row-end-3">CSS<br>Sass/SCSS</span>
             <span class="skill skill__2 col-start-2 col-end-3 row-start-3 row-end-4">BEM,<br>SMACSS, ITCSS</span>
@@ -40,6 +41,7 @@
 </template>
 
 <script>
+import { gsap } from 'gsap'
 export default {
     layout: 'fixed',
 
@@ -53,6 +55,52 @@ export default {
             }
 
         }
+    },
+
+    mounted () {
+        const tl = gsap.timeline({ paused: true, defaults: { duration: 0.6, ease: 'power4.out' } })
+        const skillsEls = document.querySelectorAll('#skills .skill')
+        const titleMaskEl = document.querySelectorAll('.mask')
+
+        tl.fromTo(
+            skillsEls,
+            { opacity: 0, x: 15, scale: 1.2, ease: 'back.out(5)' },
+            { opacity: 1, x: 0, scale: 1, stagger: { amount: 0.8, from: 'random' }, ease: 'back.out(5)' }
+        )
+
+        tl.to(titleMaskEl, { height: '100%' }, '>-0.6')
+        tl.to(titleMaskEl, { width: '100%', duration: 0.3 }, '>')
+        tl.to(titleMaskEl, { left: 'auto', right: 0, duration: 0 }, '>')
+        tl.to(titleMaskEl, { width: '12px', duration: 0.3 }, '>')
+        tl.to(titleMaskEl, { height: '0px', right: '26%', bottom: '35px' }, '>')
+        tl.to(titleMaskEl, { height: '60px', backgroundColor: '#b0ed60', ease: 'back.out(5)' }, '>')
+
+        tl.play()
     }
 }
 </script>
+
+<style scoped>
+    .skill{
+        opacity: 0;
+    }
+
+    .berry-hero{
+        position: relative;
+    }
+
+    .berry-hero span{
+        position: relative;
+        z-index: 10;
+    }
+
+    .berry-hero .mask{
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 0px;
+        height: 0px;
+        background: theme('colors.white');
+        z-index: 1;
+    }
+</style>
