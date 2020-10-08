@@ -102,11 +102,13 @@ export default {
     pageTransition: {
         name: 'fade-in-up',
         mode: 'out-in'
-    },
+    }
 
+    /*
     layoutTransition: {
         name: 'fade',
         // name: 'fade-in-up-layout',
         mode: 'out-in'
     }
+    */
 }

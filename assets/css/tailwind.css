@@ -162,11 +162,11 @@ svg{
 */
 
 .fade-leave-active{
-    transition: opacity 200ms linear 0ms;
+    transition: opacity 250ms linear;
 }
 
 .fade-enter-active{
-    transition: opacity 600ms linear 0ms;
+    transition: opacity 250ms linear;
 }
 
 .fade-leave{
@@ -174,7 +174,7 @@ svg{
 }
 
 .fade-leave-to{
-    opacity: 0;
+    opacity: 0.75;
 }
 
 .fade-enter{

@@ -6,13 +6,13 @@
             </div>
 
             <div class="intro__text">
-                <h1 class="berry-hero text-huge lg:text-hero3">
-                    Hello!
+                <h1 class="berry-hero text-huge lg:text-hero3 overflow-hidden pb-4 relative">
+                    <span class="relative z-30">Hello!</span>
                     <br>
-                    I'm <span class="text-violet">Berry</span>.
-                    <div class="mask"></div>
+                    <span class="relative z-30">I'm </span><span class="relative z-30 text-violet">Berry</span><span class="relative z-30">.</span>
+                    <div class="intro__text__mask absolute inset-0 bg-lime z-20 transform -translate-x-full"></div>
                 </h1>
-                <div class="mt-3">
+                <div class="mt-8">
                     <p>I'm a <span class="text-violet">Web Developer</span> located in Brescia (Italy).</p>
                     <p>
                         My main focus is <span class="text-lime">Frontend development</span>,<br>with strong experience structuring and building websites with <span class="text-lime">CMS</span> like WordPress.
@@ -60,20 +60,22 @@ export default {
     mounted () {
         const tl = gsap.timeline({ paused: true, defaults: { duration: 0.6, ease: 'power4.out' } })
         const skillsEls = document.querySelectorAll('#skills .skill')
-        const titleMaskEl = document.querySelectorAll('.mask')
+        const titleMaskEl = document.querySelectorAll('.intro__text__mask')
+        const titleEl = document.querySelectorAll('.berry-hero')
 
+        // Animate hero mask
+        tl.to(titleMaskEl, { x: '100%', duration: 0.6 }, 0.6)
+        .to(titleMaskEl, { x: '-100%' }, '>-0.3')
+        .to(titleMaskEl, { width: '12px', x: '0px' }, '>-0.2')
+        .to(titleEl, { paddingLeft: '24px' }, '>-0.45')
+        .to(titleMaskEl, { backgroundColor: '#7C48FF' }, '<')
+
+        // Animate skills
         tl.fromTo(
             skillsEls,
-            { opacity: 0, x: 15, scale: 1.2, ease: 'back.out(5)' },
-            { opacity: 1, x: 0, scale: 1, stagger: { amount: 0.8, from: 'random' }, ease: 'back.out(5)' }
+            { opacity: 0, x: 15, scale: 1.2 },
+            { opacity: 1, x: 0, scale: 1, stagger: { amount: 0.9, from: 'random' }, ease: 'back.out(3)' }
         )
-
-        tl.to(titleMaskEl, { height: '100%' }, '>-0.6')
-        tl.to(titleMaskEl, { width: '100%', duration: 0.3 }, '>')
-        tl.to(titleMaskEl, { left: 'auto', right: 0, duration: 0 }, '>')
-        tl.to(titleMaskEl, { width: '12px', duration: 0.3 }, '>')
-        tl.to(titleMaskEl, { height: '0px', right: '26%', bottom: '35px' }, '>')
-        tl.to(titleMaskEl, { height: '60px', backgroundColor: '#b0ed60', ease: 'back.out(5)' }, '>')
 
         tl.play()
     }
@@ -83,24 +85,5 @@ export default {
 <style scoped>
     .skill{
         opacity: 0;
-    }
-
-    .berry-hero{
-        position: relative;
-    }
-
-    .berry-hero span{
-        position: relative;
-        z-index: 10;
-    }
-
-    .berry-hero .mask{
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        width: 0px;
-        height: 0px;
-        background: theme('colors.white');
-        z-index: 1;
     }
 </style>
