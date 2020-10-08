@@ -1,18 +1,20 @@
 <template>
     <article class="container mx-auto lg:flex lg:items-center lg:justify-between text-center lg:text-left">
-        <div class="intro w-full lg:w-8/12 lg:pr-4 lg:flex items-start">
-            <div class="intro__image w-full lg:w-2/12 lg:pr-4">
+
+        <div id="hero" class="intro w-full lg:w-7/12 lg:pr-4 lg:flex items-start">
+            <div class="intro__image w-full lg:w-3/12 lg:pr-4">
                 <img :src="images.intro.src" :alt="images.intro.alt" class="inline-block rounded-full w-1/3 mb-4 lg:mb-0 lg:w-full">
             </div>
 
             <div class="intro__text">
-                <h1 class="berry-hero text-huge lg:text-hero3 overflow-hidden pb-4 relative">
+                <h1 class="intro__title berry-hero text-huge lg:text-hero3 overflow-hidden pb-4 relative">
                     <span class="relative z-30">Hello!</span>
                     <br>
                     <span class="relative z-30">I'm </span><span class="relative z-30 text-violet">Berry</span><span class="relative z-30">.</span>
+
                     <div class="intro__text__mask absolute inset-0 bg-lime z-20 transform -translate-x-full"></div>
                 </h1>
-                <div class="mt-8">
+                <div class="intro__description mt-8">
                     <p>I'm a <span class="text-violet">Web Developer</span> located in Brescia (Italy).</p>
                     <p>
                         My main focus is <span class="text-lime">Frontend development</span>,<br>with strong experience structuring and building websites with <span class="text-lime">CMS</span> like WordPress.
@@ -61,10 +63,10 @@ export default {
         const tl = gsap.timeline({ paused: true, defaults: { duration: 0.6, ease: 'power4.out' } })
         const skillsEls = document.querySelectorAll('#skills .skill')
         const titleMaskEl = document.querySelectorAll('.intro__text__mask')
-        const titleEl = document.querySelectorAll('.berry-hero')
+        const titleEl = document.querySelectorAll('.intro__title')
 
         // Animate hero mask
-        tl.to(titleMaskEl, { x: '100%', duration: 0.6 }, 0.6)
+        tl.to(titleMaskEl, { x: '100%', duration: 0.6 }, '>0.9')
         .to(titleMaskEl, { x: '-100%' }, '>-0.3')
         .to(titleMaskEl, { width: '12px', x: '0px' }, '>-0.2')
         .to(titleEl, { paddingLeft: '24px' }, '>-0.45')
