@@ -18,7 +18,7 @@ module.exports = {
             lime: '#b0ed60',
             violet: '#7C48FF',
             purple: '#6b46c1',
-            purple2: '#553c9a',
+            purple2: '#44307b',
             white: '#FFFFFF',
             graylight: '#CCCCCC',
             gray: '#858585',
@@ -58,6 +58,24 @@ module.exports = {
 
             lineHeight: {
                 berry: 0.95
+            },
+
+            gridTemplateRows: {
+                10: 'repeat(10, minmax(0, 1fr))'
+            },
+
+            gridRowStart: {
+                7: '7',
+                8: '8',
+                9: '9',
+                10: '10'
+            },
+
+            gridRowEnd: {
+                7: '7',
+                8: '8',
+                9: '9',
+                10: '10'
             }
         }
     },

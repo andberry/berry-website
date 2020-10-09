@@ -26,7 +26,12 @@ p{
     @apply mb-3;
 }
 
-article a{
+a{
+    @apply transition-all duration-200 ease-linear;
+}
+
+
+.link--styled{
     color: theme('colors.lime');
     @apply transition-all duration-200 ease-linear;
     @apply py-2;
@@ -57,13 +62,14 @@ article a{
     }
 }
 
-article a:hover {
+.link--styled:hover {
     @apply border-lime;
 
     &:after{
         width: 100%;
     }
 }
+
 
 svg{
     max-width: 100%;
@@ -208,10 +214,6 @@ svg{
 
 .skill__2{
     @apply bg-lime text-black;
-}
-
-.skill__3{
-    @apply bg-purple2;
 }
 
 .skills-block{
