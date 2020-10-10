@@ -30,9 +30,16 @@ export default {
 </script>
 
 <style>
-    .nuxt-content h1,
     .nuxt-content h2,
     .nuxt-content h3{
         @apply mt-16 mb-4;
+    }
+
+    .nuxt-content h2{
+        @apply text-4xl;
+    }
+
+    .nuxt-content h3{
+        @apply text-3xl;
     }
 </style>
