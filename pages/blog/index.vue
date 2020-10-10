@@ -7,7 +7,9 @@
         <div class="posts-lists">
             <div v-for="(post, key) in posts" :key="key" class="post mb-16 lg:mb-32">
                 <h2 class="post__title berry-title text-4xl mb-2">
-                    {{ post.title }}
+                    <nuxt-link :to="post.path" class="hover:text-lime block">
+                        {{ post.title }}
+                    </nuxt-link>
                 </h2>
                 <h3 class="post__createdat mb-4 text-sm">
                     {{ post.createdAtDisplay }}
@@ -17,7 +19,7 @@
                 </p>
 
                 <div class="post__bottom flex justify-end">
-                    <nuxt-link :to="post.path" class="text-sm">
+                    <nuxt-link :to="post.path" class="text-sm link--styled">
                         Read Post
                     </nuxt-link>
                 </div>
