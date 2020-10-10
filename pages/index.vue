@@ -1,6 +1,5 @@
 <template>
     <article class="container mx-auto lg:flex lg:items-center lg:justify-between text-center lg:text-left">
-
         <div id="hero" class="intro w-full lg:w-7/12 lg:pr-4 lg:flex items-start">
             <div class="intro__image w-full lg:w-3/12 lg:pr-4">
                 <img :src="images.intro.src" :alt="images.intro.alt" class="inline-block rounded-full w-1/3 mb-4 lg:mb-0 lg:w-4/5 lg:mx-auto lg:block">
@@ -81,11 +80,13 @@ export default {
         tlIntro
         .to(titleMaskEl, { x: '100%' }, '>0.9')
         .to(titleMaskEl, { x: '-100%' }, '>-0.3')
+
         .to(titleMaskEl, { width: '0.75rem', x: '0px' }, '>-0.2')
         .to(titleEl, { paddingLeft: '24px' }, '>-0.45')
-        .to(imageEl, { opacity: 1 }, '<')
-        .to(titleMaskEl2, { height: '100%', duration: 2.4 })
 
+        .to(imageEl, { opacity: 1 }, '<')
+
+        .to(titleMaskEl2, { height: '100%', duration: 2.4 })
         .to(introDescriptionEl, { opacity: 1, duration: 2.4 }, '<')
 
         // Animate skills
@@ -103,4 +104,10 @@ export default {
     .intro__description{
         opacity: 0;
     }
+
+    /*
+    article{
+        filter: grayscale(1);
+    }
+    */
 </style>
