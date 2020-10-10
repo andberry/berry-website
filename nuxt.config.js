@@ -1,5 +1,3 @@
-import hljs from 'highlight.js'
-
 export default {
     /*
     ** Nuxt rendering mode
