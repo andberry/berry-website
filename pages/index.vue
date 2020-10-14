@@ -27,12 +27,13 @@
         <div id="skills" class="skills hidden lg:grid w-4/12 mt-16 lg:mt-0 grid-cols-4 grid-rows-10 gap-3 lg:pl-4">
             <span class="skill skill__1 col-start-1 col-end-2 row-start-2 row-end-3">HTML</span>
             <span class="skill skill__1 col-start-2 col-end-3 row-start-3 row-end-4">CSS<br>Sass/SCSS</span>
+            <span class="skill skill__2 col-start-3 col-end-4 row-start-1 row-end-2">Javascript<br>ES6+</span>
             <span class="skill skill__2 col-start-2 col-end-3 row-start-4 row-end-5">BEM,<br>SMACSS, ITCSS</span>
             <span class="skill skill__1 col-start-1 col-end-2 row-start-5 row-end-6">Tailwind<br>CSS</span>
-            <span class="skill skill__2 col-start-3 col-end-4 row-start-1 row-end-2">Javascript<br>ES6+</span>
             <span class="skill skill__2 col-start-3 col-end-4 row-start-6 row-end-7">Foundation<br>Bootstrap</span>
-            <span class="skill skill__1 col-start-4 col-end-5 row-start-4 row-end-5">Vue.js</span>
-            <span class="skill skill__2 col-start-4 col-end-5 row-start-5 row-end-6">Nuxt.js</span>
+            <span class="skill skill__1 col-start-3 col-end-4 row-start-2 row-end-3">Vue.js</span>
+            <span class="skill skill__2 col-start-4 col-end-5 row-start-3 row-end-4">Nuxt.js</span>
+            <span class="skill skill__1 col-start-4 col-end-5 row-start-5 row-end-6">GSAP</span>
             <span class="skill skill__2 col-start-2 col-end-3 row-start-8 row-end-9">WordPress</span>
             <span class="skill skill__1 col-start-2 col-end-3 row-start-7 row-end-8">PHP</span>
             <span class="skill skill__2 col-start-1 col-end-2 row-start-7 row-end-8">Twig</span>
@@ -87,7 +88,7 @@ export default {
         .to(imageEl, { opacity: 1 }, '<')
 
         .to(titleMaskEl2, { height: '100%', duration: 2.4 })
-        .to(introDescriptionEl, { opacity: 1, duration: 2.4 }, '<')
+        .to(introDescriptionEl, { opacity: 1, duration: 2.4 }, '<+0.3')
 
         // Animate skills
         tlIntro.add(tlSKills)
