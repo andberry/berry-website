@@ -2,6 +2,8 @@
     <article class="container mx-auto max-w-screen-md">
         <h1 class="page-title mb-16 lg:mb-32">
             Berry's Blog
+            <br>
+            "{{ tag }}" posts
         </h1>
 
         <div class="posts-lists">
@@ -12,7 +14,7 @@
                     </nuxt-link>
                 </h2>
                 <h3 class="post__createdat mb-4 text-sm">
-                    {{ post.createdAtDisplay }}
+                    {{ post.createdAtDisplayMaomao }}
                 </h3>
                 <p class="post__abstract mb-0">
                     {{ post.abstract }}
@@ -39,15 +41,15 @@
 
 <script>
 export default {
-    async asyncData ({ $content }) {
+    async asyncData ({ params, $content }) {
         return {
             posts: await $content('blog')
                 .only(['title', 'abstract', 'createdAtDisplay', 'slug', 'path', 'tags'])
-                .where({ published: true })
+                .where({ tags: { $contains: params.tag }, published: true })
                 .sortBy('createdAt', 'desc')
-                .fetch()
+                .fetch(),
+            tag: params.tag
         }
     }
 }
-
 </script>

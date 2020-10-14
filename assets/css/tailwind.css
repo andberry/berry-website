@@ -16,6 +16,9 @@
 
 
 body{
+    /*
+    @apply font-font3;
+    */
     @apply font-light;
     @apply font-exo2;
     @apply text-lg;
@@ -193,7 +196,8 @@ svg{
 
 
 .hljs{
-    @apply py-8 !important;
+    @apply pt-2 !important;
+    @apply pb-8 !important;
     @apply px-8 !important;
     @apply mt-2 mb-8;
     @apply text-sm;

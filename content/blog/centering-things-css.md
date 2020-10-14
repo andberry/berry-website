@@ -3,6 +3,8 @@ title: 'Centering Things in CSS'
 abstract: 'Yet another article about different ways to center things in CSS: position absolute + translate, Flexbox, CSS Grid'
 createdAt: 20201002
 createdAtDisplay: 'October 2, 2020'
+published: true
+tags: ['css']
 ---
 As usual, as web developers, we have different ways to do the same thing, and centering items is a topic we face on daily basis. Fortunately we've moved from the prehistoric age of tables and float and today we can easily get support from standardized useful technologies that dramatically simplifies our job.
 
@@ -70,7 +72,7 @@ If we don't know the exact height and width of our content we can absolutely pos
 }
 </code></pre>
 
-It's a very common situation (for me), so we can create a usefull Sass mixin to be used on .content:
+It's a very common situation (for me), so I created a usefull Sass mixin to be used on .content:
 <pre><code class="scss">
 @mixin berry-abs-center(){
   position: absolute;
@@ -82,7 +84,9 @@ It's a very common situation (for me), so we can create a usefull Sass mixin to 
 
 
 ## Using Flexbox
-Flexbox makes centering things really easy. Centering both horizontally and vertically a div with an unknown width and height requires only 3 lines of code:
+Flexbox makes centering things really easy.
+
+Centering both horizontally and vertically a div with an unknown width and height requires only 3 lines of code:
 <pre><code class="scss">
 .container{
     display: flex;

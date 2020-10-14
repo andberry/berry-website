@@ -1,8 +1,11 @@
 ---
 title: 'var, let, const: declaring variables in Javascript'
+maomao: 'pispis maomao'
 abstract: ''
 createdAt: 20201006
 createdAtDisplay: 'October 6, 2020'
+published: true
+tags: ['javascript']
 ---
 In Javascript we can declare variables using <strong>var</strong>, <strong>const</strong> and <strong>let</strong>
 
@@ -11,10 +14,14 @@ In Javascript we can declare variables using <strong>var</strong>, <strong>const
 <strong>var</strong> is the old way (pre es6/es2015) of declaring variables. It's a weak variable declaration because it doesn't help us understanding if binding could change durign execution.
 
 
-## consts
+## let
+We use <strong>let</strong> to declare bindings that could chage during execution (eg. a loop counter, or a variable used in math).
+
+
+## const
 <strong>const</strong> stands for constant. We use const for bindings that will not change during execution.
 
-Pay attention: this means that identifiers declared with const cannot be re-assigned, but in case of objects assignmment it's allowed to change it's attributes after binding:
+Pay attention: this means that identifiers declared with const cannot be re-assigned, but in case of objects we can change its attributes after binding:
 <pre><code class="javascript">
 const str = "foobar"
 str = "barfoo"
@@ -28,14 +35,22 @@ obj
 { foo: 'foo3', bar: 'bar' }
 </code></pre>
 
-## let
-We use let to declare bindings that could chage during execution (eh a loop counter, or a variable used in math).
 
-
-## let, const, var and variable scoping
+## Scoping
 Variables declared with <strong>var</strong> are only function-scoped or globally-scoped.
 
 On the other end, the scope of variables declared with <strong>const</strong> and <strong>let</strong> is the enclosing block (code between curly braces { } ) and not the whole function.
+
+## Global object (window)
+Variables declared outside functions (aka in the top level of program) with <strong>var</strong> become properties of the global object (window), while variables declared with <strong>let</strong> or <strong>const</strong> don't.
+<pre><code class="javascript">
+var foo = "foo";
+let bar = "bar";
+window.foo
+"foo"
+window.bar
+undefined
+</code></pre>
 
 
 ## Conclusion
