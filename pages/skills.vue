@@ -1,17 +1,14 @@
 <template>
     <article class="container mx-auto max-w-screen-xl">
-        <h1 class="berry-title text-5xl lg:text-hero2 mb-12">
+        <h1 class="berry-title text-5xl lg:text-hero2 mb-16 lg:mb-32">
             My Skills
         </h1>
 
         <section>
-            <h2 class="berry-title text-2xl lg:text-hero1 mb-4 lg:mb-8">
-                Tech Skills
-            </h2>
             <div class="flex flex-wrap -mx-4">
                 <div class="skills-block w-full lg:w-3/12">
                     <div class="block__inner">
-                        <h3 class="block__title">
+                        <h3 class="block__title border-l-4 border-lime pl-6">
                             Languages
                         </h3>
                         <ul>
@@ -88,8 +85,8 @@
                         </h3>
                         <ul>
                             <li>Responsive web design</li>
-                            <li>Usability</li>
                             <li>CSS: BEM, SMACSS, ITCSS</li>
+                            <li>Usability</li>
                         </ul>
                     </div>
                 </div>
@@ -107,16 +104,12 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section class="mt-16">
-            <h2 class="berry-title text-2xl lg:text-hero1 mb-4 lg:mb-8">
-                Soft Skills
-            </h2>
-            <div class="flex flex-wrap -mx-4">
-                <div class="skills-block">
+                <div class="skills-block w-full lg:w-3/12">
                     <div class="block__inner">
+                        <h3 class="block__title">
+                            Soft Skills
+                        </h3>
                         <ul>
                             <li>Critical and creative thinker</li>
                             <li>Team building and leadership attitude</li>
@@ -129,3 +122,39 @@
         </section>
     </article>
 </template>
+
+<script>
+import { gsap } from 'gsap'
+
+export default {
+    mounted () {
+        const skillsBlockEls = document.querySelectorAll('.skills-block')
+        const tl = gsap.timeline({ paused: true, defaults: { duration: 0.6, ease: 'none' } })
+
+        for (const item of Array.from(skillsBlockEls)) {
+            const itemTitle = item.querySelector('.block__title')
+            const itemItems = item.querySelectorAll('li')
+            console.log(itemTitle)
+            console.log(itemItems)
+            const tlItem = gsap.timeline({ paused: true, defaults: { duration: 0.9, ease: 'power4.out' } })
+            tlItem
+            .to(itemTitle, { opacity: 1, y: 0 })
+            .to(itemItems, { opacity: 1, y: 0, stagger: { amount: 0.3 } }, '<+0.2')
+
+            tl.add(tlItem, '<+0.2')
+            tlItem.play()
+        }
+        // tl.to(skillsBlockEls, { opacity: 1, y: 0, stagger: { amount: 1.2, from: 'random' } })
+
+        tl.play()
+    }
+}
+</script>
+
+<style scoped>
+    .skills-block .block__title,
+    .skills-block li{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+</style>
