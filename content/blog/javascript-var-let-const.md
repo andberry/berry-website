@@ -55,5 +55,5 @@ undefined
 
 ## Conclusion
 * I don't use <strong>var</strong> anymore
-* I use <strong>const</strong> almost for everything
 * I use <strong>let</strong> only when it's required that binding can change during execution (eg. loop variables)
+* I use <strong>const</strong> almost for everything
