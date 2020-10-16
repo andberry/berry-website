@@ -1,6 +1,6 @@
 
 <template>
-    <header id="page__header" class="fixed top-0 left-0 w-full h:8 lg:h-16 px-4 py-2 lg:py-0 flex items-center justify-between bg-purple2 text-white text-sm">
+    <header id="page__header" class="fixed top-0 left-0 w-full h:8 lg:h-16 px-4 py-2 lg:py-0 flex items-center justify-between bg-purple text-white text-sm z-40">
         <div class="flex items-center">
             <div class="header__logo mr-4 relative z-40">
                 <img src="~/assets/images/berry_twitter.jpg" alt="Berry Image" class="rounded-full w-10 lg:w-12">
