@@ -1,6 +1,6 @@
 <template>
     <article class="container mx-auto max-w-screen-xl">
-        <h1 class="berry-title text-5xl lg:text-hero2 mb-16 lg:mb-32">
+        <h1 class="title--berry text-5xl lg:text-hero2 mb-16 lg:mb-32 relative inline-block overflow-hidden pb-4">
             My Skills
         </h1>
 
@@ -129,19 +129,32 @@ import { gsap } from 'gsap'
 export default {
     mounted () {
         const skillsBlockEls = document.querySelectorAll('.skills-block')
-        const tl = gsap.timeline({ paused: true, defaults: { duration: 0.6, ease: 'none' } })
+        /*
+        const titleMaskEl = document.querySelector('.intro__text__mask')
+        const titleMaskEl2 = document.querySelector('.intro__text__mask--2')
+        const titleEl = document.querySelector('.berry-hero')
+        */
+        const tl = gsap.timeline({ paused: true, defaults: { duration: 0.6, ease: 'power4.out' } })
+
+        /*
+        tl
+        .to(titleMaskEl, { x: '100%' })
+        .to(titleMaskEl, { x: '-100%' }, '>-0.3')
+        .to(titleMaskEl, { width: '0.75rem', x: '0px' }, '>-0.2')
+        .to(titleEl, { paddingLeft: '24px' }, '>-0.45')
+        .to(titleMaskEl2, { height: '100%', duration: 2.4 })
+        */
 
         for (const item of Array.from(skillsBlockEls)) {
             const itemTitle = item.querySelector('.block__title')
             const itemItems = item.querySelectorAll('li')
-            console.log(itemTitle)
-            console.log(itemItems)
-            const tlItem = gsap.timeline({ paused: true, defaults: { duration: 0.9, ease: 'power4.out' } })
+            const tlItem = gsap.timeline({ paused: true, defaults: { duration: 1.2, ease: 'expo.out' } })
+
             tlItem
             .to(itemTitle, { opacity: 1, y: 0 })
-            .to(itemItems, { opacity: 1, y: 0, stagger: { amount: 0.3 } }, '<+0.2')
+            .to(itemItems, { opacity: 1, y: 0, stagger: { each: 0.1 } }, '<+0.9')
 
-            tl.add(tlItem, '<+0.2')
+            tl.add(tlItem, '<+0.1')
             tlItem.play()
         }
         // tl.to(skillsBlockEls, { opacity: 1, y: 0, stagger: { amount: 1.2, from: 'random' } })

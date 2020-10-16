@@ -52,7 +52,7 @@ module.exports = {
             fontSize: {
                 hero1: '2vw',
                 hero2: '5vw',
-                hero3: '6vw',
+                hero3: '6.5vw',
                 huge: '14vw'
             },
 

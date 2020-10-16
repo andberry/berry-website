@@ -33,6 +33,11 @@ a{
     @apply transition-all duration-200 ease-linear;
 }
 
+::selection {
+  background: theme('colors.purple');
+  color: theme('colors.lime');
+}
+
 
 .link--styled{
     color: theme('colors.lime');
@@ -84,7 +89,15 @@ svg{
 /*
     Titles / Typography
 */
-.berry-title{
+.hero--berry{
+    @apply font-exo2;
+    @apply font-semibold;
+    @apply leading-berry;
+    @apply text-lime;
+}
+
+
+.title--berry{
     @apply font-exo2;
     @apply font-semibold;
     @apply leading-berry;
@@ -94,20 +107,11 @@ svg{
     @apply pl-4;
 }
 
-.berry-hero{
-    @apply font-exo2;
-    @apply font-semibold;
-    @apply leading-berry;
-    @apply text-lime;
-}
-
-.heading--title{
-    @apply mb-4;
-}
 
 /* Default page title */
+/*
 .page-title{
-    @apply berry-title text-6xl;
+    @apply berry-hero text-6xl;
 }
 
 @screen lg{
@@ -115,11 +119,12 @@ svg{
         @apply text-hero2;
     }
 }
+*/
 
 
 .nuxt-content h2,
 .nuxt-content h3{
-    @apply berry-title;
+    @apply title--berry;
 }
 
 

@@ -6,7 +6,7 @@
             </div>
 
             <div class="intro__text">
-                <h1 class="intro__title berry-hero text-huge lg:text-hero3 overflow-hidden pb-4 relative">
+                <h1 class="intro__title hero--berry text-huge lg:text-hero3 overflow-hidden pb-4 relative">
                     <span class="relative z-30">Hello!</span>
                     <br>
                     <span class="relative z-30">I'm </span><span class="relative z-30 text-violet">Berry</span><span class="relative z-30">.</span>
@@ -87,11 +87,11 @@ export default {
 
         .to(imageEl, { opacity: 1 }, '<')
 
-        .to(titleMaskEl2, { height: '100%', duration: 2.4 })
+        .to(titleMaskEl2, { height: '100%', duration: 2.4 }, '>-0.6')
         .to(introDescriptionEl, { opacity: 1, duration: 2.4 }, '<+0.3')
 
         // Animate skills
-        tlIntro.add(tlSKills)
+        tlIntro.add(tlSKills, '<+0.9')
         tlSKills.play()
 
         tlIntro.play()

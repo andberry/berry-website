@@ -1,6 +1,6 @@
 <template>
     <article class="container mx-auto max-w-screen-md">
-        <h1 class="page-title mb-4">
+        <h1 class="title--berry text-5xl lg:text-hero2 mb-4">
             {{ post.title }}
         </h1>
 

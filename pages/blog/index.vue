@@ -1,12 +1,12 @@
 <template>
     <article class="container mx-auto max-w-screen-md">
-        <h1 class="page-title mb-16 lg:mb-32">
+        <h1 class="title--berry text-5xl lg:text-hero2 mb-16 lg:mb-32">
             Berry's Blog
         </h1>
 
         <div class="posts-lists">
             <div v-for="(post, key) in posts" :key="key" class="post mb-16 lg:mb-32">
-                <h2 class="post__title berry-title text-4xl mb-2">
+                <h2 class="post__title title--berry text-4xl mb-2">
                     <nuxt-link :to="post.path" class="hover:text-lime block">
                         {{ post.title }}
                     </nuxt-link>
@@ -23,7 +23,7 @@
                         <nuxt-link
                             v-for="(tag, index) in post.tags"
                             :key="index"
-                            class="post-tag mr-2 text-xs leading-tight text-center bg-violet text-white px-2 py-1 rounded-sm"
+                            class="post-tag mr-2 text-xs leading-tight text-center bg-violet hover:bg-purple text-white px-2 py-1 rounded-sm"
                             :to="{ name: 'blog-tag-tag', params: { tag } }">
                                 {{ tag }}
                         </nuxt-link>
