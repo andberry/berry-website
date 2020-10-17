@@ -1,22 +1,173 @@
 <template>
-    <article class="w-full px-4 container mx-auto">
-        <div class="max-w-screen-md mx-auto">
-            <h1 class="berry-title text-6xl mb-12">
-                Lorem ipsum dolor sit amet
-            </h1>
+    <article class="container mx-auto max-w-screen-xl">
+        <h1 class="title--berry text-5xl lg:text-hero2 mb-16 lg:mb-32 relative inline-block overflow-hidden pb-4">
+            My Skills
+        </h1>
 
-            <h2 class="berry-title text-5xl mb-4">
-                Lorem ipsum dolor sit amet
-            </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia culpa impedit doloremque unde quisquam illo, expedita harum accusamus minus perspiciatis ipsum quas asperiores sunt qui itaque totam. Cum, eos, qui.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore placeat non dignissimos, earum repudiandae culpa necessitatibus totam expedita, quam itaque accusamus error. Illum, suscipit vero porro unde rerum dolore ipsam.</p>
+        <section>
+            <div class="flex flex-wrap -mx-4">
+                <div class="skills-block w-full lg:w-3/12">
+                    <div class="block__inner">
+                        <h3 class="block__title border-l-4 border-lime pl-6">
+                            Languages
+                        </h3>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3, Sass/SCSS</li>
+                            <li>Javascript (ES6+)</li>
+                            <li>PHP, Twig</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <h2 class="berry-title text-5xl mb-4 mt-16">
-                Consectetur adipisicing elit. Totam voluptatum odio molestiae veritatis expedita
-            </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia culpa impedit doloremque unde quisquam illo, expedita harum accusamus minus perspiciatis ipsum quas asperiores sunt qui itaque totam. Cum, eos, qui.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore placeat non dignissimos, earum repudiandae culpa necessitatibus totam expedita, quam itaque accusamus error. Illum, suscipit vero porro unde rerum dolore ipsam.</p>
-            <nuxt-link to="/styleguide">Styleguide</nuxt-link>
-        </div>
+                <div class="skills-block w-full lg:w-3/12">
+                    <div class="block__inner">
+                        <h3 class="block__title">
+                            CSS Frameworks
+                        </h3>
+                        <ul>
+                            <li>Foundation</li>
+                            <li>Bootstrap</li>
+                            <li>Tailwind CSS</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="skills-block w-full lg:w-3/12">
+                    <div class="block__inner">
+                        <h3 class="block__title">
+                            Libraries
+                        </h3>
+                        <ul>
+                            <li>jQuery</li>
+                            <li>Vue.js</li>
+                            <li>GSAP</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="skills-block w-full lg:w-3/12">
+                    <div class="block__inner">
+                        <h3 class="block__title">
+                            CMS and Frameworks
+                        </h3>
+                        <ul>
+                            <li>WordPress</li>
+                            <li>Drupal</li>
+                            <li>Prestashop</li>
+                            <li>Django</li>
+                            <li>Nuxt.js</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="skills-block w-full lg:w-3/12">
+                    <div class="block__inner">
+                        <h3 class="block__title">
+                            Dev tools
+                        </h3>
+                        <ul>
+                            <li>Git</li>
+                            <li>gulp.js</li>
+                            <li>Grunt</li>
+                            <li>Parcel.js</li>
+                            <li>webpack</li>
+                            <li>rollup.js</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="skills-block w-full lg:w-3/12">
+                    <div class="block__inner">
+                        <h3 class="block__title">
+                            Best pratices
+                        </h3>
+                        <ul>
+                            <li>Responsive web design</li>
+                            <li>CSS: BEM, SMACSS, ITCSS</li>
+                            <li>Usability</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="skills-block w-full lg:w-3/12">
+                    <div class="block__inner">
+                        <h3 class="block__title">
+                            Sysadmin/OS
+                        </h3>
+                        <ul>
+                            <li>macOS</li>
+                            <li>Linux</li>
+                            <li>Linux-based server setup (network, services, LAMP, pm2)</li>
+                            <li>Internet network infrastructure and services (IP, DNS, Web, Mail)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="skills-block w-full lg:w-3/12">
+                    <div class="block__inner">
+                        <h3 class="block__title">
+                            Soft Skills
+                        </h3>
+                        <ul>
+                            <li>Critical and creative thinker</li>
+                            <li>Team building and leadership attitude</li>
+                            <li>Work independently or as part of a team</li>
+                            <li>Never stop learning attitude</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
     </article>
 </template>
+
+<script>
+import { gsap } from 'gsap'
+
+export default {
+    mounted () {
+        const skillsBlockEls = document.querySelectorAll('.skills-block')
+        /*
+        const titleMaskEl = document.querySelector('.intro__text__mask')
+        const titleMaskEl2 = document.querySelector('.intro__text__mask--2')
+        const titleEl = document.querySelector('.berry-hero')
+        */
+        const tl = gsap.timeline({ paused: true, defaults: { duration: 0.6, ease: 'power4.out' } })
+
+        /*
+        tl
+        .to(titleMaskEl, { x: '100%' })
+        .to(titleMaskEl, { x: '-100%' }, '>-0.3')
+        .to(titleMaskEl, { width: '0.75rem', x: '0px' }, '>-0.2')
+        .to(titleEl, { paddingLeft: '24px' }, '>-0.45')
+        .to(titleMaskEl2, { height: '100%', duration: 2.4 })
+        */
+
+        for (const item of Array.from(skillsBlockEls)) {
+            const itemTitle = item.querySelector('.block__title')
+            const itemItems = item.querySelectorAll('li')
+            const tlItem = gsap.timeline({ paused: true, defaults: { duration: 1.2, ease: 'expo.out' } })
+
+            tlItem
+            .to(itemTitle, { opacity: 1, y: 0 })
+            .to(itemItems, { opacity: 1, y: 0, stagger: { each: 0.1 } }, '<+0.9')
+
+            tl.add(tlItem, '<+0.1')
+            tlItem.play()
+        }
+        // tl.to(skillsBlockEls, { opacity: 1, y: 0, stagger: { amount: 1.2, from: 'random' } })
+
+        tl.play()
+    }
+}
+</script>
+
+<style scoped>
+    .skills-block .block__title,
+    .skills-block li{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+</style>

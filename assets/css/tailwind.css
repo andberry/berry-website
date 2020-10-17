@@ -16,37 +16,88 @@
 
 
 body{
+    /*
+    @apply font-font3;
+    */
     @apply font-light;
     @apply font-exo2;
     @apply text-lg;
-
     /* @apply font-font10; */
 }
 
 p{
-    @apply mb-5;
+    @apply mb-3;
 }
 
-article a{
-    color: theme('colors.violet');
+a{
     @apply transition-all duration-200 ease-linear;
-    @apply pb-1;
-    @apply border-b-4;
-    @apply border-lime;
 }
 
-article a:hover {
+::selection {
+  background: theme('colors.purple');
+  color: theme('colors.lime');
+}
+
+
+.link--styled{
     color: theme('colors.lime');
-    @apply border-violet;
+    @apply transition-all duration-200 ease-linear;
+    @apply py-2;
+    position: relative;
+
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 4px;
+        left: 0px;
+        width: 100%;
+        height: 3px;
+        background-color: theme('colors.lime');
+        transition: all 250ms theme('transitionTimingFunction.def');
+    }
+
+    &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 4px;
+        left: 0px;
+        width: 0%;
+        height: 3px;
+        background-color: theme('colors.violet');
+        transition: all 250ms theme('transitionTimingFunction.def');
+    }
 }
 
-#page-header-socials svg{
-    fill: theme('colors.lime');
+.link--styled:hover {
+    @apply border-lime;
+
+    &:after{
+        width: 100%;
+    }
+}
+
+
+svg{
     max-width: 100%;
     height: auto;
 }
 
-.berry-title{
+
+
+/*
+    Titles / Typography
+*/
+.hero--berry{
+    @apply font-exo2;
+    @apply font-semibold;
+    @apply leading-berry;
+    @apply text-lime;
+}
+
+
+.title--berry{
     @apply font-exo2;
     @apply font-semibold;
     @apply leading-berry;
@@ -54,57 +105,143 @@ article a:hover {
     @apply border-l-8;
     @apply border-violet;
     @apply pl-4;
-
-    /* @apply font-font11; */
 }
 
-.berry-hero{
-    @apply font-exo2;
-    @apply font-font11;
-    @apply font-medium;
-    @apply leading-berry;
+
+/* Default page title */
+/*
+.page-title{
+    @apply berry-hero text-6xl;
+}
+
+@screen lg{
+    .page-title{
+        @apply text-hero2;
+    }
+}
+*/
+
+
+.nuxt-content h2,
+.nuxt-content h3{
+    @apply title--berry;
+}
+
+
+
+/*
+    Menu
+*/
+#main-menu a:hover{
     @apply text-lime;
+    @apply transition-all duration-200 ease-linear;
 }
 
-.heading--title{
-    @apply mb-4;
-}
+
 
 /*
 	Page transitions: fade-in-up
 */
-@keyframes fadeInUp {
-  from {
-    transform: translate3d(0, 20px, 0);
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1
-  }
+.fade-in-up-leave-active{
+    transition: transform 450ms cubic-bezier(0.215, 0.610, 0.355, 1.000) 0ms, opacity 200ms linear 0ms;
 }
 
-.fade-in-up-leave-to {
-  opacity: 0.75;
-  transition: opacity .3s;
+.fade-in-up-enter-active{
+    transition: transform 1200ms cubic-bezier(0.215, 0.610, 0.355, 1.000) 0ms, opacity 600ms linear 0ms;
 }
 
-.fade-in-up-enter {
-  opacity: 0.75;
-  transform: translate3d(0, 20px, 0);
+.fade-in-up-leave{
+    opacity: 1;
+    transform: translateY(0px);
+
+}
+.fade-in-up-leave-to{
+    opacity: 0;
+    transform: translateY(-60px);
+
 }
 
-.fade-in-up-enter-to {
-  opacity: 0.75;
-  animation-duration: .75s;
-  animation-fill-mode: both;
-  animation-name: fadeInUp;
+.fade-in-up-enter{
+    opacity: 0;
+    transform: translateX(60px);
 }
+.fade-in-up-enter-to{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+
+/*
+	Page transitions: fade-in-up layout
+*/
+
+.fade-leave-active{
+    transition: opacity 250ms linear;
+}
+
+.fade-enter-active{
+    transition: opacity 250ms linear;
+}
+
+.fade-leave{
+    opacity: 1;
+}
+
+.fade-leave-to{
+    opacity: 0.75;
+}
+
+.fade-enter{
+    opacity: 0;
+}
+.fade-enter-to{
+    opacity: 1;
+}
+
+
 
 .hljs{
-    @apply py-8 !important;
+    @apply pt-2 !important;
+    @apply pb-8 !important;
     @apply px-8 !important;
-    @apply my-8;
+    @apply mt-2 mb-8;
     @apply text-sm;
     @apply font-fontmono;
+}
+
+
+/*
+    Skills
+*/
+.skill{
+    @apply rounded-sm text-white inline-flex items-center justify-center py-1 text-xs leading-tight text-center;
+}
+
+.skill__1{
+    @apply bg-violet;
+}
+
+.skill__2{
+    @apply bg-lime text-black;
+}
+
+.skills-block{
+    @apply px-4 mb-8;
+}
+
+.skills-block .block__inner{
+    @apply py-4 pb-4 pt-1 h-full;
+}
+
+.skills-block .block__title{
+    @apply text-2xl font-bold mb-3 leading-none border-l-4 border-lime pl-6;
+}
+
+.skills-block ul{
+    @apply pl-6 border-l-4 border-transparent text-base;
+
+}
+
+.skills-block li{
+    @apply pt-1 pb-1 leading-tight;
 }

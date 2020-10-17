@@ -72,7 +72,13 @@ export default {
     ** Content module configuration
     ** See https://content.nuxtjs.org/configuration
     */
-    content: {},
+    content: {
+        markdown: {
+            prism: {
+                theme: false
+            }
+        }
+    },
     /*
     ** Build configuration
     ** See https://nuxtjs.org/api/configuration-build/
@@ -92,13 +98,9 @@ export default {
     },
 
     pageTransition: {
-        // name: 'page',
-        // name: 'slide',
-        // name: 'zoom',
         name: 'fade-in-up',
         mode: 'out-in'
     }
-
     /*
     layoutTransition: {
         name: 'fade-in-up',
