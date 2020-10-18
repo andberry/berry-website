@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <div id="skills" class="skills hidden lg:grid w-4/12 mt-16 lg:mt-0 grid-cols-4 grid-rows-10 gap-3 lg:pl-4">
+        <div id="skills" class="skills hidden lg:grid w-5/12 xl:w-4/12 mt-16 lg:mt-0 grid-cols-4 grid-rows-10 gap-3 lg:pl-4">
             <span class="skill skill__1 col-start-1 col-end-2 row-start-2 row-end-3">HTML</span>
             <span class="skill skill__1 col-start-2 col-end-3 row-start-3 row-end-4">CSS<br>Sass/SCSS</span>
             <span class="skill skill__2 col-start-3 col-end-4 row-start-1 row-end-2">Javascript<br>ES6+</span>
