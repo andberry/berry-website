@@ -80,11 +80,12 @@ export default {
     },
 
     mounted () {
-        // Handle close mobile-menu after using a link in the menu
+        // Close mobile-menu after using a link in the menu
         const menuEl = document.getElementById('main-menu')
         const menuLinksEls = document.querySelectorAll('#main-menu a')
         for (const item of Array.from(menuLinksEls)) {
             item.addEventListener('click', () => {
+                console.log('close mobile menu')
                 menuEl.classList.add('mobile-menu--hidden')
             })
         }
