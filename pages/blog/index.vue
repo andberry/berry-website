@@ -40,6 +40,8 @@
 </template>
 
 <script>
+import { gsap } from 'gsap'
+
 export default {
     async asyncData ({ $content }) {
         return {
@@ -49,6 +51,18 @@ export default {
                 .sortBy('createdAt', 'desc')
                 .fetch()
         }
+    },
+
+    mounted () {
+        const postsEls = document.querySelectorAll('.post')
+        const tl = gsap.timeline({ paused: true, defaults: { duration: 0.6, ease: 'power4.out' } })
+        tl.fromTo(
+            postsEls,
+            { opacity: 0, x: 15 },
+            { opacity: 1, x: 0, stagger: 0.1 },
+            '<+0.1'
+        )
+        tl.play()
     }
 }
 
