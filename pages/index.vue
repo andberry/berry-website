@@ -1,53 +1,53 @@
 <template>
-    <article class="container mx-auto lg:flex lg:items-center lg:justify-between text-center lg:text-left">
-        <div id="hero" class="intro w-full lg:w-7/12 lg:pr-4 lg:flex items-start">
-            <div class="intro__image w-full lg:w-3/12 lg:pr-4">
-                <img :src="images.intro.src" :alt="images.intro.alt" class="inline-block rounded-full w-1/3 mb-4 lg:mb-0 lg:w-4/5 lg:mx-auto lg:block">
-            </div>
+    <div class="md:flex md:items-center w-full">
+        <article class="container mx-auto lg:flex lg:items-center lg:justify-between text-center lg:text-left pt-8 md:pt-0">
+            <div id="hero" class="intro w-full lg:w-7/12 lg:pr-4 lg:flex items-start">
+                <div class="intro__image w-full lg:w-3/12 lg:pr-4">
+                    <img :src="images.intro.src" :alt="images.intro.alt" class="inline-block rounded-full w-1/3 md:w-3/12 lg:w-4/5 mb-4 lg:mb-0  lg:mx-auto lg:block">
+                </div>
 
-            <div class="intro__text">
-                <h1 class="intro__title hero--berry text-huge lg:text-hero3 overflow-hidden pb-4 relative">
-                    <span class="relative z-30">Hello!</span>
-                    <br>
-                    <span class="relative z-30">I'm </span><span class="relative z-30 text-violet">Berry</span><span class="relative z-30">.</span>
+                <div class="intro__text">
+                    <h1 class="intro__title hero--berry text-huge lg:text-hero3 overflow-hidden pb-4 relative">
+                        <span class="relative z-30">Hello!</span>
+                        <br>
+                        <span class="relative z-30">I'm </span><span class="relative z-30 text-violet">Berry</span><span class="relative z-30">.</span>
 
-                    <div class="intro__text__mask absolute inset-0 bg-lime z-20 transform -translate-x-full"></div>
-                    <div class="intro__text__mask--2 absolute bottom-0 left-0 h-0 w-3 bg-violet z-30"></div>
-                </h1>
-                <div class="intro__description mt-8">
-                    <p>I'm a <span class="text-violet">Web Developer</span> located in Brescia (Italy).</p>
-                    <p>
-                        My main focus is <span class="text-lime">Frontend development</span>,<br>with strong experience structuring and building websites with <span class="text-lime">CMS</span> like WordPress.
-                    </p>
-                    <p>Fallen in love with <span class="text-lime">Vue.js</span>, <span class="text-lime">Nuxt.js</span> enthusiast.</p>
+                        <div class="intro__text__mask absolute inset-0 bg-lime z-20 transform -translate-x-full"></div>
+                        <div class="intro__text__mask--2 absolute bottom-0 left-0 h-0 w-3 bg-violet z-30"></div>
+                    </h1>
+                    <div class="intro__description mt-8">
+                        <p>I'm a <span class="text-violet">Web Developer</span> located in Brescia (Italy).</p>
+                        <p>
+                            My main focus is <span class="text-lime">Frontend development</span>,<br>with strong experience structuring and building websites with <span class="text-lime">CMS</span> like WordPress.
+                        </p>
+                        <p>Fallen in love with <span class="text-lime">Vue.js</span>, <span class="text-lime">Nuxt.js</span> enthusiast.</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div id="skills" class="skills hidden lg:grid w-4/12 mt-16 lg:mt-0 grid-cols-4 grid-rows-10 gap-3 lg:pl-4">
-            <span class="skill skill__1 col-start-1 col-end-2 row-start-2 row-end-3">HTML</span>
-            <span class="skill skill__1 col-start-2 col-end-3 row-start-3 row-end-4">CSS<br>Sass/SCSS</span>
-            <span class="skill skill__2 col-start-3 col-end-4 row-start-1 row-end-2">Javascript<br>ES6+</span>
-            <span class="skill skill__2 col-start-2 col-end-3 row-start-4 row-end-5">BEM,<br>SMACSS, ITCSS</span>
-            <span class="skill skill__1 col-start-1 col-end-2 row-start-5 row-end-6">Tailwind<br>CSS</span>
-            <span class="skill skill__2 col-start-3 col-end-4 row-start-6 row-end-7">Foundation<br>Bootstrap</span>
-            <span class="skill skill__1 col-start-3 col-end-4 row-start-2 row-end-3">Vue.js</span>
-            <span class="skill skill__2 col-start-4 col-end-5 row-start-3 row-end-4">Nuxt.js</span>
-            <span class="skill skill__1 col-start-4 col-end-5 row-start-5 row-end-6">GSAP</span>
-            <span class="skill skill__2 col-start-2 col-end-3 row-start-8 row-end-9">WordPress</span>
-            <span class="skill skill__1 col-start-2 col-end-3 row-start-7 row-end-8">PHP</span>
-            <span class="skill skill__2 col-start-1 col-end-2 row-start-7 row-end-8">Twig</span>
-            <span class="skill skill__1 col-start-4 col-end-5 row-start-8 row-end-9">Python</span>
-            <span class="skill skill__2 col-start-4 col-end-5 row-start-9 row-end-10">Django</span>
-        </div>
-    </article>
+            <div id="skills" class="skills hidden lg:grid w-5/12 xl:w-4/12 mt-16 lg:mt-0 grid-cols-4 grid-rows-10 gap-3 lg:pl-4">
+                <span class="skill skill__1 col-start-1 col-end-2 row-start-2 row-end-3">HTML</span>
+                <span class="skill skill__1 col-start-2 col-end-3 row-start-3 row-end-4">CSS<br>Sass/SCSS</span>
+                <span class="skill skill__2 col-start-3 col-end-4 row-start-1 row-end-2">Javascript<br>ES6+</span>
+                <span class="skill skill__2 col-start-2 col-end-3 row-start-4 row-end-5">BEM,<br>SMACSS, ITCSS</span>
+                <span class="skill skill__1 col-start-1 col-end-2 row-start-5 row-end-6">Tailwind<br>CSS</span>
+                <span class="skill skill__2 col-start-3 col-end-4 row-start-6 row-end-7">Foundation<br>Bootstrap</span>
+                <span class="skill skill__1 col-start-3 col-end-4 row-start-2 row-end-3">Vue.js</span>
+                <span class="skill skill__2 col-start-4 col-end-5 row-start-3 row-end-4">Nuxt.js</span>
+                <span class="skill skill__1 col-start-4 col-end-5 row-start-5 row-end-6">GSAP</span>
+                <span class="skill skill__2 col-start-2 col-end-3 row-start-8 row-end-9">WordPress</span>
+                <span class="skill skill__1 col-start-2 col-end-3 row-start-7 row-end-8">PHP</span>
+                <span class="skill skill__2 col-start-1 col-end-2 row-start-7 row-end-8">Twig</span>
+                <span class="skill skill__1 col-start-4 col-end-5 row-start-8 row-end-9">Python</span>
+                <span class="skill skill__2 col-start-4 col-end-5 row-start-9 row-end-10">Django</span>
+            </div>
+        </article>
+    </div>
 </template>
 
 <script>
 import { gsap } from 'gsap'
 export default {
-    layout: 'fixed',
-
     data () {
         return {
             images: {

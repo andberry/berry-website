@@ -16,13 +16,9 @@
 
 
 body{
-    /*
-    @apply font-font3;
-    */
     @apply font-light;
     @apply font-exo2;
     @apply text-lg;
-    /* @apply font-font10; */
 }
 
 p{
@@ -36,6 +32,10 @@ a{
 ::selection {
   background: theme('colors.purple');
   color: theme('colors.lime');
+}
+
+:focus {
+    outline: none !important;
 }
 
 
