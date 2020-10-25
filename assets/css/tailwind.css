@@ -38,6 +38,10 @@ a{
   color: theme('colors.lime');
 }
 
+:focus {
+    outline: none !important;
+}
+
 
 .link--styled{
     color: theme('colors.lime');
