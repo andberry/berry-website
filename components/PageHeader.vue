@@ -1,6 +1,6 @@
 
 <template>
-    <header id="page__header" class="fixed top-0 left-0 w-full h:8 lg:h-16 px-4 py-2 lg:py-0 flex items-center justify-between bg-purple text-white text-sm z-40">
+    <header id="page__header" class="fixed top-0 left-0 w-full h-16 px-4 py-2 lg:py-0 flex items-center justify-between bg-purple text-white text-sm z-40">
         <div class="flex items-center">
 
             <div class="header__logo lg:mr-4 relative z-40 w-10 lg:w-12">
@@ -61,8 +61,8 @@
 </template>
 <script>
 import { gsap } from 'gsap'
-import twResolveConfig from 'tailwindcss/resolveConfig'
-import twConfigFile from '../tailwind.config.js'
+// import twResolveConfig from 'tailwindcss/resolveConfig'
+// import twConfigFile from '../tailwind.config.js'
 import data from '~/assets/data/data.json'
 import twitterIcon from '~/assets/images/twitter1.svg?inline'
 import linkedinIcon from '~/assets/images/linkedin.svg?inline'
@@ -97,43 +97,47 @@ export default {
     },
 
     mounted () {
-        const twConfig = twResolveConfig(twConfigFile)
+        // const twConfig = twResolveConfig(twConfigFile)
 
         // Setup open mobile menu animation
-        const menuEl = document.getElementById('main-menu')
-        const menuItemsEls = document.querySelectorAll('#main-menu li')
-        const hambMenuItems = document.querySelectorAll('.hamb__item')
-        const hambMenuItem1 = document.querySelector('.hamb__item:nth-child(1)')
-        const hambMenuItem2 = document.querySelector('.hamb__item:nth-child(2)')
-        const hambMenuItem3 = document.querySelector('.hamb__item:nth-child(3)')
-        const openMobileMenuTl = gsap.timeline({ paused: true, defaults: { duration: 0.4, ease: 'power4.out' } })
+        const vw = document.documentElement.clientWidth
+        if (vw < 1024) {
+            const menuEl = document.getElementById('main-menu')
+            const menuItemsEls = document.querySelectorAll('#main-menu li')
+            const hambMenuItems = document.querySelectorAll('.hamb__item')
+            const hambMenuItem1 = document.querySelector('.hamb__item:nth-child(1)')
+            const hambMenuItem2 = document.querySelector('.hamb__item:nth-child(2)')
+            const hambMenuItem3 = document.querySelector('.hamb__item:nth-child(3)')
+            const openMobileMenuTl = gsap.timeline({ paused: true, defaults: { duration: 0.4, ease: 'power4.out' } })
 
-        openMobileMenuTl.to(hambMenuItem1, { x: 8 })
-        openMobileMenuTl.to(hambMenuItem2, { x: 12 }, '<+0.05')
-        openMobileMenuTl.to(hambMenuItem3, { x: 16 }, '<+0.05')
-        openMobileMenuTl.to(menuEl, { autoAlpha: 1, duration: 0.2, ease: 'none' }, '>-0.4')
-        openMobileMenuTl.fromTo(
-            menuItemsEls,
-            { opacity: 0, x: -15 },
-            { opacity: 1, x: 0, stagger: 0.1 },
-            '>-0.1'
-        )
-        this.openMobileMenu = openMobileMenuTl
+            openMobileMenuTl.to(hambMenuItem1, { x: 8 })
+            openMobileMenuTl.to(hambMenuItem2, { x: 12 }, '<+0.05')
+            openMobileMenuTl.to(hambMenuItem3, { x: 16 }, '<+0.05')
+            openMobileMenuTl.to(menuEl, { autoAlpha: 1, duration: 0.2, ease: 'none' }, '>-0.4')
+            openMobileMenuTl.fromTo(
+                menuItemsEls,
+                { opacity: 0, x: -15 },
+                { opacity: 1, x: 0, stagger: 0.1 },
+                '>-0.1'
+            )
+            this.openMobileMenu = openMobileMenuTl
 
-        // Setup close mobile menu animation
-        const closeMobileMenuTl = gsap.timeline({ paused: true, defaults: { duration: 0.4, ease: 'power4.in' } })
+            // Setup close mobile menu animation
+            const closeMobileMenuTl = gsap.timeline({ paused: true, defaults: { duration: 0.4, ease: 'power4.in' } })
 
-        closeMobileMenuTl.to(menuItemsEls, { opacity: 0, x: 30, stagger: 0.1 })
-        closeMobileMenuTl.to(menuEl, { autoAlpha: 0, duration: 0.2, ease: 'none' }, '>-0.1')
-        closeMobileMenuTl.to(hambMenuItems, { x: 0, backgroundColor: twConfig.theme.colors.white, stagger: 0.05 }, '>-0.5')
-        this.closeMobileMenu = closeMobileMenuTl
+            closeMobileMenuTl.to(menuItemsEls, { opacity: 0, x: 30, stagger: 0.1 })
+            closeMobileMenuTl.to(menuEl, { autoAlpha: 0, duration: 0.2, ease: 'none' }, '>-0.1')
+            closeMobileMenuTl.to(hambMenuItems, { x: 0, stagger: 0.05 }, '>-0.5')
+            this.closeMobileMenu = closeMobileMenuTl
 
-        // Close mobile-menu after using a link in the menu
-        const menuLinksEls = document.querySelectorAll('#main-menu a')
-        for (const item of Array.from(menuLinksEls)) {
-            item.addEventListener('click', () => {
-                this.closeMobileMenu.restart()
-            })
+            // Close mobile-menu after using a link in the menu
+            const menuLinksEls = document.querySelectorAll('#main-menu a')
+            for (const item of Array.from(menuLinksEls)) {
+                item.addEventListener('click', () => {
+                    this.closeMobileMenu.restart()
+                    this.isMobileMenuOpen = false
+                })
+            }
         }
     }
 }
@@ -151,6 +155,13 @@ export default {
     #main-menu{
         opacity: 0;
         visibility: hidden;
+    }
+
+    @screen lg {
+        #main-menu{
+            opacity: 1;
+            visibility: visible;
+        }
     }
 
     .hamb__item{
