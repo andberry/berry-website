@@ -11,7 +11,7 @@
         <nuxt-content :document="post" class="post__content" />
 
         <div class="post__bottom flex justify-end mt-16 mb-16">
-            <nuxt-link to="/blog/" class="text-sm link--styled">Back to Blog</nuxt-link>
+            <nuxt-link to="/blog" class="text-sm link--styled">Back to Blog</nuxt-link>
         </div>
     </article>
 </template>
