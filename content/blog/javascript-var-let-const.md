@@ -2,8 +2,8 @@
 title: 'var, let, const: declaring variables in Javascript'
 maomao: 'pispis maomao'
 abstract: ''
-createdAt: 20201006
-createdAtDisplay: 'October 6, 2020'
+createdAt: 20200916
+createdAtDisplay: 'September 16, 2020'
 published: true
 tags: ['javascript']
 ---
