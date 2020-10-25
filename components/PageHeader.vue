@@ -80,19 +80,28 @@ export default {
             data,
             isMobileMenuOpen: false,
             mobileMenuAnimation: {},
-            openMobileMenu: {},
-            closeMobileMenu: {}
+            openMobileMenuTl: {},
+            closeMobileMenuTl: {}
         }
     },
 
     methods: {
         toggleMobileMenu () {
             if (!this.isMobileMenuOpen) {
-                this.openMobileMenu.restart()
+                this.openMobileMenu()
             } else {
-                this.closeMobileMenu.restart()
+                this.closeMobileMenu()
             }
-            this.isMobileMenuOpen = !this.isMobileMenuOpen
+        },
+
+        openMobileMenu () {
+            this.openMobileMenuTl.restart()
+            this.isMobileMenuOpen = true
+        },
+
+        closeMobileMenu () {
+            this.closeMobileMenuTl.restart()
+            this.isMobileMenuOpen = false
         }
     },
 
@@ -120,22 +129,21 @@ export default {
                 { opacity: 1, x: 0, stagger: 0.1 },
                 '>-0.1'
             )
-            this.openMobileMenu = openMobileMenuTl
+            this.openMobileMenuTl = openMobileMenuTl
 
             // Setup close mobile menu animation
             const closeMobileMenuTl = gsap.timeline({ paused: true, defaults: { duration: 0.4, ease: 'power4.in' } })
-
-            closeMobileMenuTl.to(menuItemsEls, { opacity: 0, x: 30, stagger: 0.1 })
+            closeMobileMenuTl.to(hambMenuItems, { x: 0, stagger: 0.05, ease: 'power4.out' })
+            closeMobileMenuTl.to(menuItemsEls, { opacity: 0, x: 30, stagger: 0.1 }, '>-0.6')
             closeMobileMenuTl.to(menuEl, { autoAlpha: 0, duration: 0.2, ease: 'none' }, '>-0.1')
-            closeMobileMenuTl.to(hambMenuItems, { x: 0, stagger: 0.05 }, '>-0.5')
-            this.closeMobileMenu = closeMobileMenuTl
+
+            this.closeMobileMenuTl = closeMobileMenuTl
 
             // Close mobile-menu after using a link in the menu
             const menuLinksEls = document.querySelectorAll('#main-menu a')
             for (const item of Array.from(menuLinksEls)) {
                 item.addEventListener('click', () => {
-                    this.closeMobileMenu.restart()
-                    this.isMobileMenuOpen = false
+                    this.closeMobileMenu()
                 })
             }
         }
