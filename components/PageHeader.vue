@@ -45,9 +45,15 @@
                 </div>
             </div>
 
-            <div class="block w-8 mt-1 lg:hidden">
+            <div class="block w-8 lg:hidden">
                 <div class="mobile-menu-toggle">
-                    <button v-on:click="toggleMobileMenu"><hamburgerIcon /></button>
+                    <button v-on:click="toggleMobileMenu" class="block">
+                        <div id="hamb-menu" class="hamb w-8 h-6 flex flex-col justify-between overflow-hidden">
+                            <div class="hamb__item bg-white"></div>
+                            <div class="hamb__item bg-white"></div>
+                            <div class="hamb__item bg-white"></div>
+                        </div>
+                    </button>
                 </div>
             </div>
         </div>
@@ -55,18 +61,18 @@
 </template>
 <script>
 import { gsap } from 'gsap'
+import twResolveConfig from 'tailwindcss/resolveConfig'
+import twConfigFile from '../tailwind.config.js'
 import data from '~/assets/data/data.json'
 import twitterIcon from '~/assets/images/twitter1.svg?inline'
 import linkedinIcon from '~/assets/images/linkedin.svg?inline'
 import githubIcon from '~/assets/images/github.svg?inline'
-import hamburgerIcon from '~/assets/images/hamburger.svg?inline'
 
 export default {
     components: {
         twitterIcon,
         linkedinIcon,
-        githubIcon,
-        hamburgerIcon
+        githubIcon
     },
 
     data () {
@@ -91,12 +97,21 @@ export default {
     },
 
     mounted () {
+        const twConfig = twResolveConfig(twConfigFile)
+
         // Setup open mobile menu animation
         const menuEl = document.getElementById('main-menu')
         const menuItemsEls = document.querySelectorAll('#main-menu li')
+        const hambMenuItems = document.querySelectorAll('.hamb__item')
+        const hambMenuItem1 = document.querySelector('.hamb__item:nth-child(1)')
+        const hambMenuItem2 = document.querySelector('.hamb__item:nth-child(2)')
+        const hambMenuItem3 = document.querySelector('.hamb__item:nth-child(3)')
         const openMobileMenuTl = gsap.timeline({ paused: true, defaults: { duration: 0.4, ease: 'power4.out' } })
 
-        openMobileMenuTl.to(menuEl, { autoAlpha: 1, duration: 0.2, ease: 'none' })
+        openMobileMenuTl.to(hambMenuItem1, { x: 8 })
+        openMobileMenuTl.to(hambMenuItem2, { x: 12 }, '<+0.05')
+        openMobileMenuTl.to(hambMenuItem3, { x: 16 }, '<+0.05')
+        openMobileMenuTl.to(menuEl, { autoAlpha: 1, duration: 0.2, ease: 'none' }, '>-0.4')
         openMobileMenuTl.fromTo(
             menuItemsEls,
             { opacity: 0, x: -15 },
@@ -107,8 +122,10 @@ export default {
 
         // Setup close mobile menu animation
         const closeMobileMenuTl = gsap.timeline({ paused: true, defaults: { duration: 0.4, ease: 'power4.in' } })
+
         closeMobileMenuTl.to(menuItemsEls, { opacity: 0, x: 30, stagger: 0.1 })
         closeMobileMenuTl.to(menuEl, { autoAlpha: 0, duration: 0.2, ease: 'none' }, '>-0.1')
+        closeMobileMenuTl.to(hambMenuItems, { x: 0, backgroundColor: twConfig.theme.colors.white, stagger: 0.05 }, '>-0.5')
         this.closeMobileMenu = closeMobileMenuTl
 
         // Close mobile-menu after using a link in the menu
@@ -134,5 +151,9 @@ export default {
     #main-menu{
         opacity: 0;
         visibility: hidden;
+    }
+
+    .hamb__item{
+        height: 2px;
     }
 </style>
