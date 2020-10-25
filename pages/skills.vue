@@ -138,7 +138,7 @@ export default {
 
             tlItem
             .to(itemTitle, { opacity: 1, y: 0 })
-            .to(itemItems, { opacity: 1, y: 0, stagger: { each: 0.1 } }, '<+0.9')
+            .to(itemItems, { opacity: 1, y: 0, stagger: { each: 0.05 } }, '<+0.6')
 
             tl.add(tlItem, '<+0.1')
             tlItem.play()
