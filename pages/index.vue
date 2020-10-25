@@ -1,8 +1,8 @@
 <template>
-    <article class="container mx-auto lg:flex lg:items-center lg:justify-between text-center lg:text-left">
+    <article class="container mx-auto lg:flex lg:items-center lg:justify-between text-center lg:text-left pt-8">
         <div id="hero" class="intro w-full lg:w-7/12 lg:pr-4 lg:flex items-start">
             <div class="intro__image w-full lg:w-3/12 lg:pr-4">
-                <img :src="images.intro.src" :alt="images.intro.alt" class="inline-block rounded-full w-1/3 mb-4 lg:mb-0 lg:w-4/5 lg:mx-auto lg:block">
+                <img :src="images.intro.src" :alt="images.intro.alt" class="inline-block rounded-full w-1/3 md:w-3/12 lg:w-4/5 mb-4 lg:mb-0  lg:mx-auto lg:block">
             </div>
 
             <div class="intro__text">
@@ -46,8 +46,6 @@
 <script>
 import { gsap } from 'gsap'
 export default {
-    layout: 'fixed',
-
     data () {
         return {
             images: {

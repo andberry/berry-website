@@ -1,12 +1,12 @@
 <template>
-    <article class="container mx-auto max-w-screen-xl">
-        <h1 class="title--berry text-5xl lg:text-hero2 mb-16 lg:mb-32 relative inline-block overflow-hidden pb-4">
+    <article class="container mx-auto max-w-screen-xl pt-8 md:pt-16">
+        <h1 class="title--berry text-5xl lg:text-hero2 mb-8 lg:mb-16 relative inline-block overflow-hidden pb-4">
             My Skills
         </h1>
 
         <section>
             <div class="flex flex-wrap -mx-4">
-                <div class="skills-block w-full lg:w-3/12">
+                <div class="skills-block w-full md:w-4/12 lg:w-3/12">
                     <div class="block__inner">
                         <h3 class="block__title border-l-4 border-lime pl-6">
                             Languages
@@ -21,7 +21,7 @@
                     </div>
                 </div>
 
-                <div class="skills-block w-full lg:w-3/12">
+                <div class="skills-block w-full md:w-4/12 lg:w-3/12">
                     <div class="block__inner">
                         <h3 class="block__title">
                             CSS Frameworks
@@ -34,7 +34,7 @@
                     </div>
                 </div>
 
-                <div class="skills-block w-full lg:w-3/12">
+                <div class="skills-block w-full md:w-4/12 lg:w-3/12">
                     <div class="block__inner">
                         <h3 class="block__title">
                             Libraries
@@ -47,7 +47,7 @@
                     </div>
                 </div>
 
-                <div class="skills-block w-full lg:w-3/12">
+                <div class="skills-block w-full md:w-4/12 lg:w-3/12">
                     <div class="block__inner">
                         <h3 class="block__title">
                             CMS and Frameworks
@@ -62,7 +62,7 @@
                     </div>
                 </div>
 
-                <div class="skills-block w-full lg:w-3/12">
+                <div class="skills-block w-full md:w-4/12 lg:w-3/12">
                     <div class="block__inner">
                         <h3 class="block__title">
                             Dev tools
@@ -78,7 +78,7 @@
                     </div>
                 </div>
 
-                <div class="skills-block w-full lg:w-3/12">
+                <div class="skills-block w-full md:w-4/12 lg:w-3/12">
                     <div class="block__inner">
                         <h3 class="block__title">
                             Best pratices
@@ -91,7 +91,7 @@
                     </div>
                 </div>
 
-                <div class="skills-block w-full lg:w-3/12">
+                <div class="skills-block w-full md:w-4/12 lg:w-3/12">
                     <div class="block__inner">
                         <h3 class="block__title">
                             Sysadmin/OS
@@ -105,7 +105,7 @@
                     </div>
                 </div>
 
-                <div class="skills-block w-full lg:w-3/12">
+                <div class="skills-block w-full md:w-4/12 lg:w-3/12">
                     <div class="block__inner">
                         <h3 class="block__title">
                             Soft Skills
