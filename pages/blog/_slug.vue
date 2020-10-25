@@ -1,6 +1,6 @@
 <template>
-    <article class="container mx-auto max-w-screen-md pt-8 md:pt-16">
-        <h1 class="title--berry text-5xl lg:text-hero2 mb-4">
+    <article class="post container mx-auto max-w-screen-md pt-8 md:pt-16">
+        <h1 class="post__title title--berry text-5xl lg:text-hero2 mb-4">
             {{ post.title }}
         </h1>
 
@@ -8,7 +8,11 @@
             {{ post.createdAtDisplay }}
         </h3>
 
-        <nuxt-content :document="post" />
+        <nuxt-content :document="post" class="post__content" />
+
+        <div class="post__bottom flex justify-end mt-16 mb-16">
+            <nuxt-link to="/blog/" class="text-sm link--styled">Back to Blog</nuxt-link>
+        </div>
     </article>
 </template>
 
