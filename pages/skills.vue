@@ -129,21 +129,7 @@ import { gsap } from 'gsap'
 export default {
     mounted () {
         const skillsBlockEls = document.querySelectorAll('.skills-block')
-        /*
-        const titleMaskEl = document.querySelector('.intro__text__mask')
-        const titleMaskEl2 = document.querySelector('.intro__text__mask--2')
-        const titleEl = document.querySelector('.berry-hero')
-        */
         const tl = gsap.timeline({ paused: true, defaults: { duration: 0.6, ease: 'power4.out' } })
-
-        /*
-        tl
-        .to(titleMaskEl, { x: '100%' })
-        .to(titleMaskEl, { x: '-100%' }, '>-0.3')
-        .to(titleMaskEl, { width: '0.75rem', x: '0px' }, '>-0.2')
-        .to(titleEl, { paddingLeft: '24px' }, '>-0.45')
-        .to(titleMaskEl2, { height: '100%', duration: 2.4 })
-        */
 
         for (const item of Array.from(skillsBlockEls)) {
             const itemTitle = item.querySelector('.block__title')
@@ -157,7 +143,6 @@ export default {
             tl.add(tlItem, '<+0.1')
             tlItem.play()
         }
-        // tl.to(skillsBlockEls, { opacity: 1, y: 0, stagger: { amount: 1.2, from: 'random' } })
 
         tl.play()
     }
