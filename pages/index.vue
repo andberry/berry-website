@@ -79,7 +79,8 @@ export default {
 
         // Animate hero mask
         tlIntro
-        .to(titleMaskEl, { x: '100%' }, '>0.9')
+        .fromTo(titleEl, { filter: 'grayscale(1)' }, { filter: 'grayscale(0)', duration: 1.8, ease: 'expo.in' })
+        .to(titleMaskEl, { x: '100%' }, '>0.3')
         .to(titleMaskEl, { x: '-100%' }, '>-0.3')
 
         .to(titleMaskEl, { width: '0.75rem', x: '0px' }, '>-0.2')
