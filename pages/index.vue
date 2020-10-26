@@ -113,4 +113,7 @@ export default {
     }
     */
 
+    .intro__title{
+        filter: grayscale(1);
+    }
 </style>
