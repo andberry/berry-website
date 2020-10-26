@@ -90,7 +90,7 @@ export default {
     },
 
     googleAnalytics: {
-        id: 'G-651P05D83J',
+        id: 'UA-181253873-1',
         set: [
             { field: 'anonymizeIp', value: true }
         ]
