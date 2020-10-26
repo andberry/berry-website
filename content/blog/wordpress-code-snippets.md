@@ -1,8 +1,8 @@
 ---
 title: 'WordPress code snippets'
 abstract: ''
-createdAt: 20201004
-createdAtDisplay: 'October 4, 2020'
+createdAt: 20200912
+createdAtDisplay: 'September 12, 2020'
 published: true
 tags: ['cms']
 ---

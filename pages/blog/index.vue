@@ -19,15 +19,17 @@
                 </p>
 
                 <div class="post__bottom flex justify-between items-center">
+
                     <div class="post__tags flex">
-                        <nuxt-link
+                        <div
                             v-for="(tag, index) in post.tags"
                             :key="index"
-                            class="post-tag mr-2 text-xs leading-tight text-center bg-violet hover:bg-purple text-white px-2 py-1 rounded-sm"
-                            :to="{ name: 'blog-tag-tag', params: { tag } }">
-                                {{ tag }}
-                        </nuxt-link>
+                            class="post-tag mr-2 text-xs leading-tight text-center bg-violet text-white px-2 py-1 rounded-sm"
+                        >
+                            {{ tag }}
+                        </div>
                     </div>
+
                     <nuxt-link :to="post.path" class="text-sm link--styled">
                         Read Post
                     </nuxt-link>
@@ -38,6 +40,8 @@
 </template>
 
 <script>
+import { gsap } from 'gsap'
+
 export default {
     async asyncData ({ $content }) {
         return {
@@ -47,6 +51,18 @@ export default {
                 .sortBy('createdAt', 'desc')
                 .fetch()
         }
+    },
+
+    mounted () {
+        const postsEls = document.querySelectorAll('.post')
+        const tl = gsap.timeline({ paused: true, defaults: { duration: 0.6, ease: 'power4.out' } })
+        tl.fromTo(
+            postsEls,
+            { opacity: 0, x: 15 },
+            { opacity: 1, x: 0, stagger: 0.1 },
+            '<+0.1'
+        )
+        tl.play()
     }
 }
 
