@@ -18,7 +18,7 @@
                     <div class="intro__description mt-8">
                         <p>I'm a <span class="text-violet">Web Developer</span> located in Brescia (Italy).</p>
                         <p>
-                            My main focus is <span class="text-lime">Frontend development</span>,<br>with strong experience structuring and building websites with <span class="text-lime">CMS</span> like WordPress.
+                            My main focus is <span class="text-lime">Frontend development</span>,<br>with strong experience structuring and building websites with <span class="text-lime">CMS</span>, like WordPress.
                         </p>
                         <p>Fallen in love with <span class="text-lime">Vue.js</span>, <span class="text-lime">Nuxt.js</span> enthusiast.</p>
                     </div>
@@ -79,7 +79,7 @@ export default {
 
         // Animate hero mask
         tlIntro
-        .fromTo(titleEl, { filter: 'grayscale(1)' }, { filter: 'grayscale(0)', duration: 1.8, ease: 'expo.in' })
+        .fromTo(titleEl, { filter: 'grayscale(1) ' }, { filter: 'grayscale(0)', duration: 1.2, ease: 'power4.in' })
         .to(titleMaskEl, { x: '100%' }, '>0.3')
         .to(titleMaskEl, { x: '-100%' }, '>-0.3')
 
@@ -112,4 +112,5 @@ export default {
         filter: grayscale(1);
     }
     */
+
 </style>
