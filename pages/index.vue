@@ -17,7 +17,8 @@
                         <div class="intro__text__mask--2 absolute bottom-0 left-0 h-0 w-3 bg-violet z-30"></div>
                     </h1>
                     <div class="intro__description mt-8">
-                        <p>I'm a <span class="text-violet">Web Developer</span> located in Brescia (Italy).</p>
+                        <p>I'm a <span class="text-violet">Andrea Berardi</span>,
+                            <br>a <span class="text-lime">Web Developer</span> located in Brescia (Italy).</p>
                         <p>
                             My main focus is <span class="text-lime">Frontend development</span>,<br>with strong experience structuring and building websites with <span class="text-lime">CMS</span>, like WordPress.
                         </p>
