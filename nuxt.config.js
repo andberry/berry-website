@@ -1,3 +1,5 @@
+import data from './assets/data/data.json'
+
 export default {
     /*
     ** Nuxt rendering mode
@@ -14,7 +16,7 @@ export default {
     ** See https://nuxtjs.org/api/configuration-head
     */
     head: {
-        title: process.env.npm_package_name || '',
+        title: data.seo.baseTitle,
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -58,7 +60,8 @@ export default {
     modules: [
         // Doc: https://github.com/nuxt/content
         '@nuxt/content',
-        '@nuxtjs/svg'
+        '@nuxtjs/svg',
+        '@nuxtjs/sitemap'
     ],
     /*
     ** Content module configuration
@@ -71,6 +74,21 @@ export default {
             }
         }
     },
+    /*
+        Sitemap module configuration
+    */
+    sitemap: {
+        hostname: 'https://www.andberry.me',
+        gzip: true,
+        routes: [
+            '/blog/javascript-var-let-const',
+            '/blog/javascript-var-let-const',
+            '/blog/wordpress-code-snippets',
+            '/blog/centering-things-css',
+            '/blog/welcome-to-berry-blog'
+        ]
+    },
+
     /*
     ** Build configuration
     ** See https://nuxtjs.org/api/configuration-build/

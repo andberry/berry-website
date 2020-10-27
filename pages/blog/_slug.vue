@@ -1,3 +1,4 @@
+
 <template>
     <article class="post container mx-auto max-w-screen-md pt-8 md:pt-16">
         <h1 class="post__title title--berry text-5xl lg:text-hero2 mb-4">
@@ -18,10 +19,18 @@
 
 <script>
 import hljs from 'highlight.js'
+import data from '~/assets/data/data.json'
+
 export default {
     async asyncData ({ params, $content }) {
         return {
             post: await $content('blog', params.slug).fetch()
+        }
+    },
+
+    head () {
+        return {
+            title: this.post.title + ' - ' + data.seo.baseTitle
         }
     },
 

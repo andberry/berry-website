@@ -1,3 +1,4 @@
+
 <template>
     <div class="md:flex md:items-center w-full">
         <article class="container mx-auto lg:flex lg:items-center lg:justify-between text-center lg:text-left pt-8 md:pt-0">
@@ -47,6 +48,8 @@
 
 <script>
 import { gsap } from 'gsap'
+import data from '~/assets/data/data.json'
+
 export default {
     data () {
         return {
@@ -58,6 +61,10 @@ export default {
             }
 
         }
+    },
+
+    head: {
+        title: data.seo.baseTitle
     },
 
     mounted () {

@@ -125,6 +125,7 @@
 
 <script>
 import { gsap } from 'gsap'
+import data from '~/assets/data/data.json'
 
 export default {
     mounted () {
@@ -145,6 +146,10 @@ export default {
         }
 
         tl.play()
+    },
+
+    head: {
+        title: 'Skills - ' + data.seo.baseTitle
     }
 }
 </script>

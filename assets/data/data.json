@@ -8,5 +8,9 @@
     "footerLinks": {
         "nuxt": "https://www.nuxtjs.org/",
         "tailwind": "https://tailwindcss.com/"
+    },
+
+    "seo": {
+        "baseTitle": "AndBerry.me"
     }
 }

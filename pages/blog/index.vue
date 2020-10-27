@@ -18,7 +18,7 @@
                     {{ post.abstract }}
                 </p>
 
-                <div class="post__bottom flex justify-between items-center">
+                <div class="post__bottom flex justify-between items-center mt-4">
 
                     <div class="post__tags flex">
                         <div
@@ -41,6 +41,7 @@
 
 <script>
 import { gsap } from 'gsap'
+import data from '~/assets/data/data.json'
 
 export default {
     async asyncData ({ $content }) {
@@ -51,6 +52,10 @@ export default {
                 .sortBy('createdAt', 'desc')
                 .fetch()
         }
+    },
+
+    head: {
+        title: 'Blog - ' + data.seo.baseTitle
     },
 
     mounted () {
