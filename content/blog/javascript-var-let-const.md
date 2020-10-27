@@ -1,17 +1,16 @@
 ---
-title: 'var, let, const: declaring variables in Javascript'
-maomao: 'pispis maomao'
-abstract: ''
+title: 'var, let, const: declaring variables in JavaScript'
+abstract: 'My 2 cents on the 3 different ways to declare variables in JavaScript'
 createdAt: 20200916
 createdAtDisplay: 'September 16, 2020'
 published: true
 tags: ['javascript']
 ---
-In Javascript we can declare variables using <strong>var</strong>, <strong>const</strong> and <strong>let</strong>
+In Javascript we can declare variables using <strong>var</strong>, <strong>const</strong> and <strong>let</strong> keywords
 
 
 ## var
-<strong>var</strong> is the old way (pre es6/es2015) of declaring variables. It's a weak variable declaration because it doesn't help us understanding if binding could change durign execution.
+<strong>var</strong> is the old way (pre es6/es2015) of declaring variables. It's a "weak" variable declaration because it doesn't help us understanding if binding could change durign execution.
 
 
 ## let
