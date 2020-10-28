@@ -9,7 +9,7 @@
                 </nuxt-link>
             </div>
 
-            <nav id="main-menu" class="header__nav fixed inset-0 lg:static flex items-center bg-black lg:bg-transparent z-40">
+            <nav id="main-menu" class="header__nav fixed inset-0 flex lg:static items-center bg-black lg:bg-transparent z-40">
                 <ul class="lg:flex w-full text-center lg:text-left text-lg lg:text-base">
                     <li class="py-2 lg:py-0 px-4">
                         <nuxt-link to="/" class="text-3xl md:text-4xl lg:text-base">
@@ -27,21 +27,41 @@
                         </nuxt-link>
                     </li>
                 </ul>
+
+                <div id="mobile-contacts" class="absolute inset-x-0 bottom-0 mb-8 flex justify-center self-end lg:hidden">
+                    <div class="contact contact--email w-8 mr-4">
+                        <a :href="data.contactsLinks.email"><emailIcon /></a>
+                    </div>
+                    <div class="contact contact--twitter w-8 mr-4">
+                        <a :href="data.contactsLinks.twitter" target="_blank"><twitterIcon /></a>
+                    </div>
+
+                    <div class="contact contact--linkedin w-8 mr-4">
+                        <a :href="data.contactsLinks.linkedin" target="_blank"><linkedinIcon /></a>
+                    </div>
+
+                    <div class="contact contact--github w-8">
+                        <a :href="data.contactsLinks.github" target="_blank"><githubIcon /></a>
+                    </div>
+                </div>
             </nav>
         </div>
 
         <div class="flex relative z-40">
-            <div id="page-header-socials" class="header__socials hidden lg:flex">
-                <div class="social social--twitter w-8 mr-4">
-                    <a :href="data.socialsLinks.twitter" target="_blank"><twitterIcon /></a>
+            <div id="page-header-contacts" class="header__contacts hidden lg:flex">
+                <div class="contact contact--email w-8 mr-4">
+                    <a :href="data.contactsLinks.email"><emailIcon /></a>
+                </div>
+                <div class="contact contact--twitter w-8 mr-4">
+                    <a :href="data.contactsLinks.twitter" target="_blank"><twitterIcon /></a>
                 </div>
 
-                <div class="social social--linkedin w-8 mr-4">
-                    <a :href="data.socialsLinks.linkedin" target="_blank"><linkedinIcon /></a>
+                <div class="contact contact--linkedin w-8 mr-4">
+                    <a :href="data.contactsLinks.linkedin" target="_blank"><linkedinIcon /></a>
                 </div>
 
-                <div class="social social--github w-8">
-                    <a :href="data.socialsLinks.github" target="_blank"><githubIcon /></a>
+                <div class="contact contact--github w-8">
+                    <a :href="data.contactsLinks.github" target="_blank"><githubIcon /></a>
                 </div>
             </div>
 
@@ -67,12 +87,14 @@ import data from '~/assets/data/data.json'
 import twitterIcon from '~/assets/images/twitter1.svg?inline'
 import linkedinIcon from '~/assets/images/linkedin.svg?inline'
 import githubIcon from '~/assets/images/github.svg?inline'
+import emailIcon from '~/assets/images/email.svg?inline'
 
 export default {
     components: {
         twitterIcon,
         linkedinIcon,
-        githubIcon
+        githubIcon,
+        emailIcon
     },
 
     data () {
@@ -117,17 +139,29 @@ export default {
             const hambMenuItem1 = document.querySelector('.hamb__item:nth-child(1)')
             const hambMenuItem2 = document.querySelector('.hamb__item:nth-child(2)')
             const hambMenuItem3 = document.querySelector('.hamb__item:nth-child(3)')
+            const mobileContactsEls = document.querySelectorAll('#mobile-contacts .contact')
             const openMobileMenuTl = gsap.timeline({ paused: true, defaults: { duration: 0.4, ease: 'power4.out' } })
 
+            // Hamburgher animation
             openMobileMenuTl.to(hambMenuItem1, { x: 8 })
             openMobileMenuTl.to(hambMenuItem2, { x: 12 }, '<+0.05')
             openMobileMenuTl.to(hambMenuItem3, { x: 16 }, '<+0.05')
+
+            // Menu animation
             openMobileMenuTl.to(menuEl, { autoAlpha: 1, duration: 0.2, ease: 'none' }, '>-0.4')
             openMobileMenuTl.fromTo(
                 menuItemsEls,
                 { opacity: 0, x: -15 },
                 { opacity: 1, x: 0, stagger: 0.1 },
                 '>-0.1'
+            )
+
+            // Mobile contacts animations
+            openMobileMenuTl.fromTo(
+                mobileContactsEls,
+                { opacity: 0, y: 15 },
+                { opacity: 1, y: 0, stagger: 0.05, ease: 'back.out' },
+                '>-0.3'
             )
             this.openMobileMenuTl = openMobileMenuTl
 
@@ -136,6 +170,13 @@ export default {
             closeMobileMenuTl.to(hambMenuItems, { x: 0, stagger: 0.05, ease: 'power4.out' })
             closeMobileMenuTl.to(menuItemsEls, { opacity: 0, x: 30, stagger: 0.1 }, '>-0.6')
             closeMobileMenuTl.to(menuEl, { autoAlpha: 0, duration: 0.2, ease: 'none' }, '>-0.1')
+
+            // Mobile contacts animations
+            closeMobileMenuTl.to(
+                mobileContactsEls,
+                { opacity: 0, y: 15, stagger: 0.05, ease: 'back.in' },
+                '>-0.9'
+            )
 
             this.closeMobileMenuTl = closeMobileMenuTl
 

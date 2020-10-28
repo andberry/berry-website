@@ -1,5 +1,6 @@
 {
-    "socialsLinks": {
+    "contactsLinks": {
+        "email": "mailto:hello@andberry.me",
         "twitter": "https://twitter.com/andreaberardi82",
         "linkedin": "https://www.linkedin.com/in/andrea-berardi/",
         "github": "https://github.com/andberry"
