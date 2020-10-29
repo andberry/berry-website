@@ -32,17 +32,17 @@
                     <div class="contact contact--email w-8 mr-4">
                         <a :href="data.contactsLinks.email"><emailIcon /></a>
                     </div>
-                    <div class="contact contact--twitter w-8 mr-4">
-                        <a :href="data.contactsLinks.twitter" target="_blank"><twitterIcon /></a>
-                    </div>
-
                     <div class="contact contact--linkedin w-8 mr-4">
                         <a :href="data.contactsLinks.linkedin" target="_blank"><linkedinIcon /></a>
                     </div>
-
+                    <div class="contact contact--twitter w-8 mr-4">
+                        <a :href="data.contactsLinks.twitter" target="_blank"><twitterIcon /></a>
+                    </div>
+                    <!--
                     <div class="contact contact--github w-8">
                         <a :href="data.contactsLinks.github" target="_blank"><githubIcon /></a>
                     </div>
+                    -->
                 </div>
             </nav>
         </div>
@@ -52,17 +52,17 @@
                 <div class="contact contact--email w-8 mr-4">
                     <a :href="data.contactsLinks.email"><emailIcon /></a>
                 </div>
-                <div class="contact contact--twitter w-8 mr-4">
-                    <a :href="data.contactsLinks.twitter" target="_blank"><twitterIcon /></a>
-                </div>
-
                 <div class="contact contact--linkedin w-8 mr-4">
                     <a :href="data.contactsLinks.linkedin" target="_blank"><linkedinIcon /></a>
                 </div>
-
+                <div class="contact contact--twitter w-8 mr-4">
+                    <a :href="data.contactsLinks.twitter" target="_blank"><twitterIcon /></a>
+                </div>
+                <!--
                 <div class="contact contact--github w-8">
                     <a :href="data.contactsLinks.github" target="_blank"><githubIcon /></a>
                 </div>
+                -->
             </div>
 
             <div class="block w-8 lg:hidden">
@@ -86,14 +86,14 @@ import { gsap } from 'gsap'
 import data from '~/assets/data/data.json'
 import twitterIcon from '~/assets/images/twitter1.svg?inline'
 import linkedinIcon from '~/assets/images/linkedin.svg?inline'
-import githubIcon from '~/assets/images/github.svg?inline'
+// import githubIcon from '~/assets/images/github.svg?inline'
 import emailIcon from '~/assets/images/email.svg?inline'
 
 export default {
     components: {
         twitterIcon,
         linkedinIcon,
-        githubIcon,
+        // githubIcon,
         emailIcon
     },
 
