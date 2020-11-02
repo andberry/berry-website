@@ -1,6 +1,6 @@
 <template>
     <article class="container mx-auto max-w-screen-xl pt-8 md:pt-16">
-        <h1 class="title--berry text-5xl lg:text-hero2 mb-8 lg:mb-16 relative inline-block overflow-hidden pb-4">
+        <h1 class="title--berry text-5xl lg:text-hero2 mb-8 lg:mb-16 relative overflow-hidden pb-4">
             My Skills
         </h1>
 
@@ -99,7 +99,7 @@
                         <ul>
                             <li>macOS</li>
                             <li>Linux</li>
-                            <li>Linux-based server setup (network, services, LAMP, pm2)</li>
+                            <li>Linux-based server setup (network services, LAMP, pm2)</li>
                             <li>Internet network infrastructure and services (IP, DNS, Web, Mail)</li>
                         </ul>
                     </div>
@@ -120,6 +120,9 @@
                 </div>
             </div>
         </section>
+        <div class="mt-8">
+            <a href="/docs/resume_andrea_berardi.pdf" class="link--styled">Download my resume in PDF format</a>
+        </div>
     </article>
 </template>
 
