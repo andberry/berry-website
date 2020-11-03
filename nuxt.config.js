@@ -80,11 +80,11 @@ export default {
         hostname: 'https://www.andberry.me',
         gzip: true,
         routes: [
-            '/blog/javascript-var-let-const',
-            '/blog/javascript-var-let-const',
-            '/blog/wordpress-code-snippets',
-            '/blog/centering-things-css',
-            '/blog/welcome-to-berry-blog'
+            '/articles/javascript-var-let-const',
+            '/articles/javascript-var-let-const',
+            '/articles/wordpress-code-snippets',
+            '/articles/centering-things-css',
+            '/articles/welcome-to-berry-blog'
         ]
     },
 
