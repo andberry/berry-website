@@ -152,7 +152,14 @@ export default {
     },
 
     head: {
-        title: 'Skills - ' + data.seo.baseTitle
+        title: 'Skills | ' + data.seo.baseTitle,
+        meta: [
+            {
+                name: 'description',
+                hid: 'description',
+                content: 'Andrea Berardi Web developer skills: HTML5, CSS3, Sass/SCSS, Javascript (ES6+), Vue.js, Nuxt.js, PHP, Twig, Wordpress, Python, Django'
+            }
+        ]
     }
 }
 </script>

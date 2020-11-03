@@ -65,7 +65,14 @@ export default {
     },
 
     head: {
-        title: data.seo.baseTitle
+        title: data.seo.baseTitle,
+        meta: [
+            {
+                name: 'description',
+                hid: 'description',
+                content: 'Hello, I\'m Andrea Berardi, a Web Developer located in Brescia (Italy). My main focus is Frontend development, with strong experience structuring and building websites with CMS, like WordPress. Fallen in love with Vue.js, Nuxt.js enthusiast.'
+            }
+        ]
     },
 
     mounted () {

@@ -1,11 +1,11 @@
 <template>
     <article class="container mx-auto max-w-screen-md pt-8 md:pt-16">
         <h1 class="title--berry text-5xl lg:text-hero2 mb-16 lg:mb-32">
-            Berry's Blog
+            Berry's Articles
         </h1>
 
-        <div class="posts-lists">
-            <div v-for="(post, key) in posts" :key="key" class="post mb-24 lg:mb-32">
+        <div class="articles-lists">
+            <div v-for="(post, key) in articles" :key="key" class="post mb-24 lg:mb-32">
                 <h2 class="post__title title--berry text-4xl mb-2">
                     <nuxt-link :to="post.path" class="hover:text-lime block">
                         {{ post.title }}
@@ -46,7 +46,7 @@ import data from '~/assets/data/data.json'
 export default {
     async asyncData ({ $content }) {
         return {
-            posts: await $content('blog')
+            articles: await $content('articles')
                 .only(['title', 'abstract', 'createdAtDisplay', 'slug', 'path', 'tags'])
                 .where({ published: true })
                 .sortBy('createdAt', 'desc')
@@ -55,7 +55,14 @@ export default {
     },
 
     head: {
-        title: 'Blog - ' + data.seo.baseTitle
+        title: 'Articles | ' + data.seo.baseTitle,
+        meta: [
+            {
+                name: 'description',
+                hid: 'description',
+                content: 'Andrea Berard Web Developer tech articles'
+            }
+        ]
     },
 
     mounted () {

@@ -22,8 +22,8 @@
                         </nuxt-link>
                     </li>
                     <li class="py-2 lg:py-0 px-4">
-                        <nuxt-link to="/blog" class="text-3xl md:text-4xl lg:text-base">
-                            Blog
+                        <nuxt-link to="/articles" class="text-3xl md:text-4xl lg:text-base">
+                            Articles
                         </nuxt-link>
                     </li>
                 </ul>
