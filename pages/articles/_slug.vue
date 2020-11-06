@@ -14,6 +14,10 @@
         <div class="article__bottom flex justify-end mt-16 mb-16">
             <nuxt-link to="/articles" class="text-sm link--styled">Back to list</nuxt-link>
         </div>
+
+        <footer>
+            <Disqus />
+        </footer>
     </article>
 </template>
 
