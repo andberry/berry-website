@@ -22,11 +22,16 @@ body{
 }
 
 p{
-    @apply mb-3;
+    @apply mb-6;
 }
 
 a{
     @apply transition-all duration-200 ease-linear;
+}
+
+b,
+strong {
+    font-weight: 700;
 }
 
 ::selection {
