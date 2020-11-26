@@ -5,7 +5,7 @@
 
             <div class="header__logo lg:mr-4 relative z-40 w-10 lg:w-12">
                 <nuxt-link to="/">
-                    <img src="~/assets/images/berry_twitter.jpg" alt="Berry Image" class="rounded-full">
+                    <img src="~/assets/images/berry_twitter.jpg" alt="Berry" class="rounded-full">
                 </nuxt-link>
             </div>
 
