@@ -57,7 +57,7 @@ export default {
             images: {
                 intro: {
                     src: require('~/assets/images/berry_twitter.jpg'),
-                    alt: 'Berry Image'
+                    alt: 'Berry'
                 }
             }
 
