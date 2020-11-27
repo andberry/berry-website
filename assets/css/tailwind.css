@@ -34,22 +34,22 @@ strong {
     font-weight: 700;
 }
 
-ul,
-ol {
+.nuxt-content ul,
+.nuxt-content ol {
     @apply pl-4;
     @apply mb-6;
 }
 
-ul {
+.nuxt-content ul {
     list-style-type: disclosure-closed;
 }
 
-ol {
+.nuxt-content ol {
     list-style-type: decimal;
 }
 
-ul li,
-ol li {
+.nuxt-content ul li,
+.nuxt-content ol li {
     @apply pl-2;
     @apply mb-2;
 }
