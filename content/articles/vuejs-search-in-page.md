@@ -12,7 +12,7 @@ Imaging a page (eg. built from a CMS) with a list of documents and we want to gi
 
 **In Vue.js we should think, first of all, about data, so:**
 
-1. Init the state (data) on mounted hook (populate the **"documents"** variable inxpecting and traversing the DOM)
+1. Init the state (data) on mounted hook (populate the **"documents"** variable inxpecting and traversing the DOM
 2. Create a computed value that will drive UI refresh (the **"searchResults"** variable)
 3. Add a couple of methods to improve the accessibility (**handleClickOnBody** and **handleKeyUp**)
 
