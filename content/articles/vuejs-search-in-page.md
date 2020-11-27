@@ -1,6 +1,6 @@
 ---
 title: 'Search in page with Vue.js'
-abstract: 'Using Vue.js to implement a simple but effective and usable search in page'
+abstract: 'Using Vue.js to implement a simple but effective and usable search in page.'
 createdAt: 20201120
 createdAtDisplay: 'November 20, 2020'
 published: true

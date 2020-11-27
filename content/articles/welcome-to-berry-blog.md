@@ -1,6 +1,6 @@
 ---
 title: "Ladies and gents, welcome to Berry's blog"
-abstract: 'Yes, this is going to be another personal webdev website with tech articles'
+abstract: 'Yes, this is going to be another personal webdev website with tech articles.'
 createdAt: 20200820
 createdAtDisplay: 'August 20, 2020'
 published: true

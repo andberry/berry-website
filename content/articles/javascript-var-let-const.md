@@ -1,6 +1,6 @@
 ---
 title: 'var, let, const: declaring variables in JavaScript'
-abstract: 'My 2 cents on the 3 different ways to declare variables in JavaScript'
+abstract: 'My 2 cents on the 3 different ways to declare variables in JavaScript.'
 createdAt: 20200916
 createdAtDisplay: 'September 16, 2020'
 published: true

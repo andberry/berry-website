@@ -1,6 +1,6 @@
 ---
 title: 'WordPress code snippets'
-abstract: "Usefull WordPress code snippets I've been using for years"
+abstract: "Usefull WordPress code snippets I've been using for years."
 createdAt: 20200912
 createdAtDisplay: 'September 12, 2020'
 published: true
