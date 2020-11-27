@@ -34,6 +34,27 @@ strong {
     font-weight: 700;
 }
 
+ul,
+ol {
+    @apply pl-4;
+    @apply mb-6;
+}
+
+ul {
+    list-style-type: disclosure-closed;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ul li,
+ol li {
+    @apply pl-2;
+    @apply mb-2;
+}
+
+
 ::selection {
   background: theme('colors.purple');
   color: theme('colors.lime');
