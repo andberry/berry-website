@@ -64,7 +64,7 @@ strong {
     outline: none !important;
 }
 
-
+.nuxt-content a,
 .link--styled{
     color: theme('colors.lime');
     @apply transition-all duration-200 ease-linear;
@@ -96,6 +96,7 @@ strong {
     }
 }
 
+.nuxt-content a:hover,
 .link--styled:hover {
     @apply border-lime;
 
