@@ -8,6 +8,7 @@
 
     "footerLinks": {
         "nuxt": "https://www.nuxtjs.org/",
+        "nuxtcontent": "https://content.nuxtjs.org/",
         "tailwind": "https://tailwindcss.com/"
     },
 

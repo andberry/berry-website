@@ -167,6 +167,15 @@ svg{
 
 
 /*
+    Footer
+*/
+#page__footer a:hover{
+    @apply text-lime;
+}
+
+
+
+/*
 	Page transitions: fade-in-up
 */
 .fade-in-up-leave-active{
