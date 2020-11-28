@@ -31,7 +31,7 @@
                     </div>
 
                     <nuxt-link :to="post.path" class="text-sm link--styled">
-                        Read Post
+                        Read the Article
                     </nuxt-link>
                 </div>
             </div>
