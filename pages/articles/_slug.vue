@@ -12,7 +12,7 @@
         <nuxt-content :document="article" class="article__content" />
 
         <div class="article__bottom flex justify-end mt-16 mb-16">
-            <nuxt-link to="/articles" class="text-sm link--styled">Back to list</nuxt-link>
+            <nuxt-link to="/articles" class="text-sm link--styled">Back to articles list</nuxt-link>
         </div>
 
         <footer>
