@@ -27,9 +27,9 @@
                             CSS Frameworks
                         </h3>
                         <ul>
+                            <li>Tailwind CSS</li>
                             <li>Foundation</li>
                             <li>Bootstrap</li>
-                            <li>Tailwind CSS</li>
                         </ul>
                     </div>
                 </div>
@@ -40,9 +40,9 @@
                             Libraries
                         </h3>
                         <ul>
-                            <li>jQuery</li>
                             <li>Vue.js</li>
                             <li>GSAP</li>
+                            <li>jQuery</li>
                         </ul>
                     </div>
                 </div>
@@ -53,11 +53,11 @@
                             CMS and Frameworks
                         </h3>
                         <ul>
-                            <li>WordPress</li>
-                            <li>Drupal</li>
-                            <li>Prestashop</li>
-                            <li>Django</li>
                             <li>Nuxt.js</li>
+                            <li>WordPress</li>
+                            <li>Craft CMS</li>
+                            <li>Django</li>
+                            <li>Prestashop</li>
                         </ul>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                         </h3>
                         <ul>
                             <li>Responsive web design</li>
-                            <li>CSS: BEM, SMACSS, ITCSS</li>
+                            <li>CSS: BEM, SMACSS<!--, ITCSS--></li>
                             <li>Usability</li>
                         </ul>
                     </div>
