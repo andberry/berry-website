@@ -11,18 +11,18 @@
 
             <nav id="main-menu" class="header__nav fixed inset-0 flex lg:static items-center bg-black lg:bg-transparent z-40">
                 <ul class="lg:flex w-full text-center lg:text-left text-lg lg:text-base">
-                    <li class="py-2 lg:py-0 px-4">
-                        <nuxt-link to="/" class="text-3xl md:text-4xl lg:text-base">
+                    <li class="py-4 lg:py-0 lg:px-2">
+                        <nuxt-link to="/" class="p-2 text-3xl md:text-4xl lg:text-base">
                             Home
                         </nuxt-link>
                     </li>
-                    <li class="py-2 lg:py-0 px-4">
-                        <nuxt-link to="/skills" class="text-3xl md:text-4xl lg:text-base">
+                    <li class="py-4 lg:py-0 lg:px-2">
+                        <nuxt-link to="/skills" class="p-2 text-3xl md:text-4xl lg:text-base">
                             Skills
                         </nuxt-link>
                     </li>
-                    <li class="py-2 lg:py-0 px-4">
-                        <nuxt-link to="/articles" class="text-3xl md:text-4xl lg:text-base">
+                    <li class="py-4 lg:py-0 lg:px-2">
+                        <nuxt-link to="/articles" class="p-2 text-3xl md:text-4xl lg:text-base">
                             Articles
                         </nuxt-link>
                     </li>
