@@ -19,7 +19,7 @@ But now if we call the URL without the trailing slash we're going to face a 404 
 
 **One possible solution is to force the trailing slash with a 301 redirect**.
 This is easility possible thanks to the **@nuxtjs/redirect-module** module: let's install it and what follows is all we need to do the job:
-<pre><code class"json">
+<pre><code class="json">
 redirect: [
     {
         from: '^.*(?&lt;!/)$',
