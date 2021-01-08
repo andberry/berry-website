@@ -56,6 +56,7 @@
                             <li>Nuxt.js</li>
                             <li>WordPress</li>
                             <li>Craft CMS</li>
+                            <li>Drupal</li>
                             <li>Django</li>
                             <li>Prestashop</li>
                         </ul>

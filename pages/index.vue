@@ -20,7 +20,7 @@
                         <p>I'm <span class="text-violet">Andrea Berardi</span>,
                             <br>a <span class="text-lime">Web Developer</span> located in Brescia (Italy).</p>
                         <p>
-                            My main focus is <span class="text-lime">Frontend development</span>,<br>with strong experience structuring and building websites with <span class="text-lime">CMS</span>, like WordPress.
+                            My main focus is <span class="text-lime">Frontend development</span>,<br>with strong experience structuring and building websites with <span class="text-lime">CMS</span>.
                         </p>
                         <p>Fallen in love with <span class="text-lime">Vue.js</span>, <span class="text-lime">Nuxt.js</span> enthusiast.</p>
                     </div>
