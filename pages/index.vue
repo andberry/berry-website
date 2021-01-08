@@ -31,7 +31,7 @@
                 <span class="skill skill__1 col-start-1 col-end-2 row-start-2 row-end-3">HTML</span>
                 <span class="skill skill__1 col-start-2 col-end-3 row-start-3 row-end-4">CSS<br>Sass/SCSS</span>
                 <span class="skill skill__2 col-start-3 col-end-4 row-start-1 row-end-2">Javascript<br>ES6+</span>
-                <span class="skill skill__2 col-start-2 col-end-3 row-start-4 row-end-5">BEM,<br>SMACSS, ITCSS</span>
+                <span class="skill skill__2 col-start-2 col-end-3 row-start-4 row-end-5">BEM,<br>SMACSS</span>
                 <span class="skill skill__1 col-start-1 col-end-2 row-start-5 row-end-6">Tailwind<br>CSS</span>
                 <span class="skill skill__2 col-start-3 col-end-4 row-start-6 row-end-7">Foundation<br>Bootstrap</span>
                 <span class="skill skill__1 col-start-3 col-end-4 row-start-2 row-end-3">Vue.js</span>
