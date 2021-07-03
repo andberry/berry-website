@@ -18,11 +18,14 @@
                     </h1>
                     <div class="intro__description mt-8">
                         <p>I'm <span class="text-violet">Andrea Berardi</span>,
-                            <br>a <span class="text-lime">Web Developer</span> located in Brescia (Italy).</p>
+                            <br>a <span class="text-lime">Web Developer</span> located in Halifax, Nova Scotia (Canada).</p>
                         <p>
                             My main focus is <span class="text-lime">Frontend development</span>,<br>with strong experience structuring and building websites with <span class="text-lime">CMS</span>.
                         </p>
-                        <p>Fallen in love with <span class="text-lime">Vue.js</span>, <span class="text-lime">Nuxt.js</span> enthusiast.</p>
+                        <p>Fallen in love with <span class="text-lime">Component-base development</span>,
+                            <br>
+                            <span class="text-lime">Vue.js</span> and <span class="text-lime">Nuxt.js</span> enthusiast.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -31,17 +34,19 @@
                 <span class="skill skill__1 col-start-1 col-end-2 row-start-2 row-end-3">HTML</span>
                 <span class="skill skill__1 col-start-2 col-end-3 row-start-3 row-end-4">CSS<br>Sass/SCSS</span>
                 <span class="skill skill__2 col-start-3 col-end-4 row-start-1 row-end-2">Javascript<br>ES6+</span>
-                <span class="skill skill__2 col-start-2 col-end-3 row-start-4 row-end-5">BEM,<br>SMACSS</span>
-                <span class="skill skill__1 col-start-1 col-end-2 row-start-5 row-end-6">Tailwind<br>CSS</span>
+                <span class="skill skill__2 col-start-2 col-end-3 row-start-4 row-end-5">BEM,<br>ITCSS</span>
+                <span class="skill skill__2 col-start-3 col-end-4 row-start-5 row-end-6">Tailwind<br>CSS</span>
                 <span class="skill skill__2 col-start-3 col-end-4 row-start-6 row-end-7">Foundation<br>Bootstrap</span>
                 <span class="skill skill__1 col-start-3 col-end-4 row-start-2 row-end-3">Vue.js</span>
                 <span class="skill skill__2 col-start-4 col-end-5 row-start-3 row-end-4">Nuxt.js</span>
                 <span class="skill skill__1 col-start-4 col-end-5 row-start-5 row-end-6">GSAP</span>
-                <span class="skill skill__2 col-start-2 col-end-3 row-start-8 row-end-9">WordPress</span>
-                <span class="skill skill__1 col-start-2 col-end-3 row-start-7 row-end-8">PHP</span>
-                <span class="skill skill__2 col-start-1 col-end-2 row-start-7 row-end-8">Twig</span>
+                <span class="skill skill__2 col-start-2 col-end-3 row-start-8 row-end-9">Drupal</span>
+                <span class="skill skill__2 col-start-2 col-end-3 row-start-9 row-end-10">WordPress</span>
+                <span class="skill skill__2 col-start-1 col-end-2 row-start-7 row-end-8">PHP</span>
+                <span class="skill skill__1 col-start-2 col-end-2 row-start-7 row-end-8">Twig</span>
                 <span class="skill skill__1 col-start-4 col-end-5 row-start-8 row-end-9">Python</span>
                 <span class="skill skill__2 col-start-4 col-end-5 row-start-9 row-end-10">Django</span>
+                <span class="skill skill__1 col-start-1 col-end-2 row-start-4 row-end-5">Component-base<br>Dev</span>
             </div>
         </article>
     </div>
@@ -78,19 +83,21 @@ export default {
     mounted () {
         const tlIntro = gsap.timeline({ paused: true, defaults: { duration: 0.6, ease: 'power4.out' } })
         const tlSKills = gsap.timeline({ paused: true, repeat: -1, repeatDelay: 2, yoyo: true, defaults: { duration: 0.6, ease: 'power4.out' } })
-        const skillsEls = document.querySelectorAll('#skills .skill')
+        // const skillsEls = document.querySelectorAll('#skills .skill')
         const titleMaskEl = document.querySelector('.intro__text__mask')
         const titleMaskEl2 = document.querySelector('.intro__text__mask--2')
         const titleEl = document.querySelector('.intro__title')
         const imageEl = document.querySelector('.intro__image')
         const introDescriptionEl = document.querySelector('.intro__description')
 
+        /*
         // Prepare skills animation in loop
         tlSKills.fromTo(
             skillsEls,
             { opacity: 0, x: 15, scale: 1.2 },
             { opacity: 1, x: 0, scale: 1, stagger: { amount: 0.6, from: 'random' }, ease: 'back.out(3)' }
         )
+        */
 
         // Animate hero mask
         tlIntro
@@ -108,7 +115,7 @@ export default {
 
         // Animate skills
         tlIntro.add(tlSKills, '<+0.9')
-        tlSKills.play()
+        // tlSKills.play()
 
         tlIntro.play()
     }
@@ -119,7 +126,7 @@ export default {
     .skill,
     .intro__image,
     .intro__description{
-        opacity: 0;
+        opacity: 1;
     }
 
     /*
