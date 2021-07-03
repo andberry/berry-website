@@ -83,21 +83,19 @@ export default {
     mounted () {
         const tlIntro = gsap.timeline({ paused: true, defaults: { duration: 0.6, ease: 'power4.out' } })
         const tlSKills = gsap.timeline({ paused: true, repeat: -1, repeatDelay: 2, yoyo: true, defaults: { duration: 0.6, ease: 'power4.out' } })
-        // const skillsEls = document.querySelectorAll('#skills .skill')
+        const skillsEls = document.querySelectorAll('#skills .skill')
         const titleMaskEl = document.querySelector('.intro__text__mask')
         const titleMaskEl2 = document.querySelector('.intro__text__mask--2')
         const titleEl = document.querySelector('.intro__title')
         const imageEl = document.querySelector('.intro__image')
         const introDescriptionEl = document.querySelector('.intro__description')
 
-        /*
         // Prepare skills animation in loop
         tlSKills.fromTo(
             skillsEls,
             { opacity: 0, x: 15, scale: 1.2 },
             { opacity: 1, x: 0, scale: 1, stagger: { amount: 0.6, from: 'random' }, ease: 'back.out(3)' }
         )
-        */
 
         // Animate hero mask
         tlIntro
@@ -115,7 +113,7 @@ export default {
 
         // Animate skills
         tlIntro.add(tlSKills, '<+0.9')
-        // tlSKills.play()
+        tlSKills.play()
 
         tlIntro.play()
     }
@@ -126,7 +124,7 @@ export default {
     .skill,
     .intro__image,
     .intro__description{
-        opacity: 1;
+        opacity: 0;
     }
 
     /*
