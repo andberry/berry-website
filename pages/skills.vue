@@ -27,9 +27,9 @@
                             CSS Frameworks
                         </h3>
                         <ul>
-                            <li>Tailwind CSS</li>
                             <li>Foundation</li>
                             <li>Bootstrap</li>
+                            <li>Tailwind CSS</li>
                         </ul>
                     </div>
                 </div>
@@ -53,10 +53,10 @@
                             CMS and Frameworks
                         </h3>
                         <ul>
-                            <li>Nuxt.js</li>
+                            <li>Drupal</li>
                             <li>WordPress</li>
                             <li>Craft CMS</li>
-                            <li>Drupal</li>
+                            <li>Nuxt.js</li>
                             <li>Django</li>
                             <li>Prestashop</li>
                         </ul>
@@ -86,7 +86,8 @@
                         </h3>
                         <ul>
                             <li>Responsive web design</li>
-                            <li>CSS: BEM, SMACSS<!--, ITCSS--></li>
+                            <li>CSS: BEM, ITCSS</li>
+                            <li>Component-based Front-end Development</li>
                             <li>Usability</li>
                         </ul>
                     </div>

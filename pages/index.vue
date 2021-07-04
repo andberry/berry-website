@@ -20,7 +20,7 @@
                         <p>I'm <span class="text-violet">Andrea Berardi</span>,
                             <br>a <span class="text-lime">Web Developer</span> located in Halifax, Nova Scotia (Canada).</p>
                         <p>
-                            My main focus is <span class="text-lime">Frontend development</span>,<br>with strong experience structuring and building websites with <span class="text-lime">CMS</span>.
+                            My main focus is <span class="text-lime">Front-end Development</span>,<br>with strong experience structuring and building websites with <span class="text-lime">CMS</span>.
                         </p>
                         <p>Fallen in love with <span class="text-lime">Component-base development</span>,
                             <br>
@@ -82,7 +82,7 @@ export default {
 
     mounted () {
         const tlIntro = gsap.timeline({ paused: true, defaults: { duration: 0.6, ease: 'power4.out' } })
-        const tlSKills = gsap.timeline({ paused: true, repeat: -1, repeatDelay: 2, yoyo: true, defaults: { duration: 0.6, ease: 'power4.out' } })
+        const tlSKills = gsap.timeline({ paused: true, repeat: -1, repeatDelay: 4, yoyo: true, defaults: { duration: 0.6, ease: 'power4.out' } })
         const skillsEls = document.querySelectorAll('#skills .skill')
         const titleMaskEl = document.querySelector('.intro__text__mask')
         const titleMaskEl2 = document.querySelector('.intro__text__mask--2')
@@ -94,12 +94,12 @@ export default {
         tlSKills.fromTo(
             skillsEls,
             { opacity: 0, x: 15, scale: 1.2 },
-            { opacity: 1, x: 0, scale: 1, stagger: { amount: 0.6, from: 'random' }, ease: 'back.out(3)' }
+            { opacity: 1, x: 0, scale: 1, stagger: { amount: 0.5, from: 'random' }, ease: 'back.out(5s)' }
         )
 
         // Animate hero mask
         tlIntro
-        .fromTo(titleEl, { filter: 'grayscale(1) ' }, { filter: 'grayscale(0)', duration: 1.2, ease: 'power4.in' })
+        .fromTo(titleEl, { filter: 'grayscale(1) ' }, { filter: 'grayscale(0)', duration: 1.8, ease: 'power4.in' })
         .to(titleMaskEl, { x: '100%' }, '>0.3')
         .to(titleMaskEl, { x: '-100%' }, '>-0.3')
 
@@ -109,7 +109,7 @@ export default {
         .to(imageEl, { opacity: 1 }, '<')
 
         .to(titleMaskEl2, { height: '100%', duration: 2.4 }, '>-0.6')
-        .to(introDescriptionEl, { opacity: 1, duration: 2.4 }, '<+0.3')
+        .to(introDescriptionEl, { opacity: 1, duration: 2.4 }, '>-2.4')
 
         // Animate skills
         tlIntro.add(tlSKills, '<+0.9')
