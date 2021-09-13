@@ -32,7 +32,9 @@ module.exports = {
 
         fontFamily: {
             exo2: ['"Exo 2"', 'sans-serif'],
-            fontmono: ['"Courier Prime"', 'monospace']
+            fontmono: ['"Courier Prime"', 'monospace'],
+            ubuntu: ['Ubuntu', 'sans-serif']
+            /* comfortaa: ['Comfortaa', 'cursive'], */
         },
 
         transitionTimingFunction: {

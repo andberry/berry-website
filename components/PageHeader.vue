@@ -12,17 +12,17 @@
             <nav id="main-menu" class="header__nav fixed inset-0 flex lg:static items-center bg-black lg:bg-transparent z-40">
                 <ul class="lg:flex w-full text-center lg:text-left text-lg lg:text-base">
                     <li class="py-4 lg:py-0 lg:px-2">
-                        <nuxt-link to="/" class="p-2 text-3xl md:text-4xl lg:text-base">
+                        <nuxt-link to="/" class="p-2 text-3xl md:text-4xl lg:text-base font-semibold">
                             Home
                         </nuxt-link>
                     </li>
                     <li class="py-4 lg:py-0 lg:px-2">
-                        <nuxt-link to="/skills" class="p-2 text-3xl md:text-4xl lg:text-base">
+                        <nuxt-link to="/skills" class="p-2 text-3xl md:text-4xl lg:text-base font-semibold">
                             Skills
                         </nuxt-link>
                     </li>
                     <li class="py-4 lg:py-0 lg:px-2">
-                        <nuxt-link to="/articles" class="p-2 text-3xl md:text-4xl lg:text-base">
+                        <nuxt-link to="/articles" class="p-2 text-3xl md:text-4xl lg:text-base font-semibold">
                             Articles
                         </nuxt-link>
                     </li>
@@ -211,5 +211,9 @@ export default {
 
     .hamb__item{
         height: 2px;
+    }
+
+    .nuxt-link-exact-active {
+        @apply text-lime;
     }
 </style>

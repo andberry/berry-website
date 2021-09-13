@@ -23,8 +23,11 @@ export default {
         ],
         link: [
             { rel: 'icon', type: 'image/png', href: '/berry_twitter.png' },
-            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;500;600;700&display=swap' },
-            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap' }
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;500;600;700&family=Ubuntu:wght@300;400;600&family=Courier+Prime&display=swap' }
+            /* { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap' },
+            /* { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap' },
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap' }
+            */
         ]
     },
     /*

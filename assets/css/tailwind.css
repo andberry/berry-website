@@ -17,8 +17,9 @@
 
 body{
     @apply font-light;
-    @apply font-exo2;
-    @apply text-lg;
+    /* @apply font-comfortaa; */
+    @apply font-ubuntu;
+    /* @apply text-lg; */
 }
 
 p{
@@ -116,6 +117,10 @@ svg{
 /*
     Titles / Typography
 */
+h1,h2,h3,h4,h5,h6 {
+    @apply font-exo2;
+}
+
 .hero--berry{
     @apply font-exo2;
     @apply font-semibold;
