@@ -9,9 +9,9 @@
 
                 <div class="intro__text">
                     <h1 class="intro__title hero--berry text-huge lg:text-hero3 overflow-hidden pb-4 relative">
-                        <span class="relative z-30">Hello!</span>
+                        <span class="relative z-30">Hi,</span>
                         <br>
-                        <span class="relative z-30">I'm </span><span class="relative z-30 text-violet">Berry</span><span class="relative z-30">.</span>
+                        <span class="relative z-30">I'm </span><span class="relative z-30 text-violet">Berry</span><span class="relative z-30">!</span>
 
                         <div class="intro__text__mask absolute inset-0 bg-lime z-20 transform -translate-x-full"></div>
                         <div class="intro__text__mask--2 absolute bottom-0 left-0 h-0 w-3 bg-violet z-30"></div>
@@ -22,7 +22,7 @@
                         <p>
                             My main focus is <span class="text-lime">Front-end Development</span>,<br>with strong experience structuring and building websites with <span class="text-lime">CMS</span>.
                         </p>
-                        <p>Fallen in love with <span class="text-lime">Component-base development</span>,
+                        <p>Fallen in love with <span class="text-lime">Component-Based development</span>,
                             <br>
                             <span class="text-lime">Vue.js</span> and <span class="text-lime">Nuxt.js</span> enthusiast.
                         </p>
@@ -34,10 +34,12 @@
                 <span class="skill skill__2 col-start-1 col-end-2 row-start-2 row-end-3">HTML</span>
                 <span class="skill skill__1 col-start-2 col-end-3 row-start-3 row-end-4">CSS<br>Sass/SCSS</span>
                 <span class="skill skill__2 col-start-3 col-end-4 row-start-1 row-end-2">Javascript<br>ES6+</span>
-                <span class="skill skill__1 col-start-2 col-end-3 row-start-4 row-end-5">BEM,<br>ITCSS</span>
-                <span class="skill skill__2 col-start-3 col-end-4 row-start-5 row-end-6">Tailwind<br>CSS</span>
-                <span class="skill skill__1 col-start-3 col-end-4 row-start-6 row-end-7">UIkit</span>
-                <span class="skill skill__2 col-start-3 col-end-4 row-start-7 row-end-8">Foundation<br>Bootstrap</span>
+                <span class="skill skill__1 col-start-2 col-end-3 row-start-4 row-end-5">BEM</span>
+                <span class="skill skill__1 col-start-2 col-end-3 row-start-5 row-end-6">ITCSS</span>
+                <span class="skill skill__1 col-start-3 col-end-4 row-start-4 row-end-5">UIkit</span>
+                <span class="skill skill__2 col-start-3 col-end-4 row-start-5 row-end-6">Foundation</span>
+                <span class="skill skill__2 col-start-3 col-end-4 row-start-6 row-end-7">Bootstrap</span>
+                <span class="skill skill__2 col-start-3 col-end-4 row-start-7 row-end-8">Tailwind<br>CSS</span>
                 <span class="skill skill__1 col-start-3 col-end-4 row-start-2 row-end-3">Vue.js</span>
                 <span class="skill skill__2 col-start-4 col-end-5 row-start-3 row-end-4">Nuxt.js</span>
                 <span class="skill skill__2 col-start-4 col-end-5 row-start-5 row-end-6">GSAP</span>
@@ -48,7 +50,7 @@
                 <span class="skill skill__2 col-start-2 col-end-2 row-start-7 row-end-8">Twig</span>
                 <span class="skill skill__2 col-start-4 col-end-5 row-start-8 row-end-9">Python</span>
                 <span class="skill skill__2 col-start-4 col-end-5 row-start-9 row-end-10">Django</span>
-                <span class="skill skill__1 col-start-1 col-end-2 row-start-4 row-end-5">Component-base<br>Dev</span>
+                <span class="skill skill__1 col-start-1 col-end-2 row-start-4 row-end-5">Component<br>Based</span>
             </div>
         </article>
     </div>
@@ -77,7 +79,7 @@ export default {
             {
                 name: 'description',
                 hid: 'description',
-                content: 'Hello, I\'m Andrea Berardi, a Web Developer located in Brescia (Italy). My main focus is Frontend development, with strong experience structuring and building websites with CMS, like WordPress. Fallen in love with Vue.js, Nuxt.js enthusiast.'
+                content: 'Hi, I\'m Andrea Berardi, a Web Developer located in Halifax, Nova Scotia (Canada).. My main focus is Frontend development, with strong experience structuring and building websites with CMS.'
             }
         ]
     },
