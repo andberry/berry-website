@@ -4,7 +4,7 @@ abstract: 'What is Component-Based Frontend Dev? Why it is worth using it? How t
 createdAt: 20210826
 createdAtDisplay: 'August 16, 2021'
 published: true
-tags: [cms]
+tags: [frontend, cms]
 ---
 ## What is Component-Base Frontend Development
 First of all, Component-Based is an approach to UI Design and Development.
