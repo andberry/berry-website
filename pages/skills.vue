@@ -14,7 +14,7 @@
                         <ul>
                             <li>HTML5</li>
                             <li>CSS3, Sass/SCSS</li>
-                            <li>Javascript (ES6+)</li>
+                            <li>JavaScript (ES6+)</li>
                             <li>PHP, Twig</li>
                             <li>Python</li>
                         </ul>
@@ -27,6 +27,7 @@
                             CSS Frameworks
                         </h3>
                         <ul>
+                            <li>UIkit</li>
                             <li>Foundation</li>
                             <li>Bootstrap</li>
                             <li>Tailwind CSS</li>
@@ -58,7 +59,6 @@
                             <li>Craft CMS</li>
                             <li>Nuxt.js</li>
                             <li>Django</li>
-                            <li>Prestashop</li>
                         </ul>
                     </div>
                 </div>
@@ -71,10 +71,9 @@
                         <ul>
                             <li>Git</li>
                             <li>gulp.js</li>
-                            <li>Grunt</li>
+                            <li>rollup.js</li>
                             <li>Parcel.js</li>
                             <li>webpack</li>
-                            <li>rollup.js</li>
                         </ul>
                     </div>
                 </div>
@@ -85,9 +84,9 @@
                             Best pratices
                         </h3>
                         <ul>
-                            <li>Responsive web design</li>
-                            <li>CSS: BEM, ITCSS</li>
-                            <li>Component-based Front-end Development</li>
+                            <li>Responsive Web Design</li>
+                            <li>Component-Based Dev</li>
+                            <li>CSS: BEM, ITCSS, Namespaces</li>
                             <li>Usability</li>
                         </ul>
                     </div>
