@@ -66,7 +66,9 @@ and the you can include the CSS for the components you're using (eg. _components
 
 JavaScript: simply import the framework (eg. in app.js)
 <code><pre class="scss">
-import UIkit from 'uikit';</pre></code>
+import UIkit from 'uikit';
+import Icons from 'uikit/dist/js/uikit-icons';
+UIkit.use(Icons);</pre></code>
 
 This way you load all the JavaScript part of the framework but only the style files you're actually using in your frontend,
 and you can easily get the framework css and js files bundles with your codebase (reducing the number of browser requests)
