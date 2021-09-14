@@ -178,3 +178,7 @@ And then inside c-gallery.html.twig
 {% set file_desc = (node.field_file.0.description) ? node.field_file.0.description : node.field_file.0.entity.filename.value %}
 &lt;a href="{{ file_url }}" class="c-button--light"&gt;{{ file_desc }}&lt;/a&gt;
 </code></pre>
+
+### Interesting links
+- https://www.droptica.com/blog/component-based-design/
+- https://www.cmsdrupal.com/blog/how-component-based-approach-speeds-your-ui-design-process
