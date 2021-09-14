@@ -26,7 +26,7 @@ As I said before, Componend-Based approach is not only a dev-tech-code thing, bu
 From the design point of view, the best is to have a complete and clear collection of all components involved in the project,
 and then the actual design of pages.
 
-As a developer you start coding first building the collection of all components and then you can go on building pages.
+As a developer you start coding first by building the collection of all components and then you can go on building pages.
 
 This paradigm is amazing when working with a CMS: implementation details depend on the CMS you're building the frontend for, but more or less this is path for the win: **you first code the abstract components, then you attach dynamic data coming from the CMS and then you build the page**.
 
@@ -35,7 +35,7 @@ This paradigm is amazing when working with a CMS: implementation details depend 
 Switching to a Component-Based Design and Development paradigm means:
 1. more collaboration between designers and developers at the early stages of the project;
 2. developers can concentrate on implementing pieces of UI unchained from the underlying CMS used: your frontend code is less dependant by the CMS, so you're free to use whatever markup/classes/architecture you want;
-4. you can implement a style guide shared between the team that can helps a lot in terms of keeping consistency durint the project
+4. you can implement a style guide shared between the team that can help a lot in terms of keeping consistency durint the project
 5. your client or content editor people will easily get one "flexible" page template rather than a set of prefixed page templates. I guess it's a great value added to the project in the sense that your clients will be able to build whatever kind of page they'd like in the future just using and rearranging the building blocks.
 
 
@@ -47,7 +47,7 @@ This is my way of implementing Component-Based Frontend Dev in Drupal.
 2. **CSS**: a separate scss file for each component (I love ITCSS architecture and I use gulp and sass to build the final compressed css file). BEM methodology drives me for classes names.
 3. **JavaScript**: when required, JavaScript is implemented as ES6 module and bundled with other modules (using gulp, babel and rollup for the build). Using CSS classes with "js-" namespace is a great way to target blocks from JavaScript (eg. js-carousel)
 
-This is an example of the markup of an hero component:
+This is an example of the markup of the hero component:
 <pre><code class="twig">
 &lt;section class="c-hero js-hero"&gt;
     &lt;div class="c-hero__bgimage" style="background-image: url('{{ image }}')" &gt;&lt;/div&gt;
