@@ -286,3 +286,13 @@ h1,h2,h3,h4,h5,h6 {
 .skills-block li{
     @apply pt-1 pb-1 leading-tight;
 }
+
+
+
+blockquote {
+    @apply border-l-4 border-violet px-4 py-4 my-8;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0px;
+}
