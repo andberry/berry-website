@@ -1,6 +1,10 @@
 import data from './assets/data/data.json'
 
 export default {
+    server: {
+        port: 3333
+    },
+
     /*
     ** Nuxt rendering mode
     ** See https://nuxtjs.org/api/configuration-mode
