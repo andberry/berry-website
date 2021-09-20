@@ -9,12 +9,12 @@ tags: [frontend, cms]
 ## What is Component-Base Frontend Development
 First of all, **Component-Based is an approach to UI Design and Development**.
 
-Shortly, your website is no more thinked in terms of pages, but it's designed and implemented as a list of small and reusable blocks (components).
-In other words, your pages become "simply" compositions of these blocks, rearraging them in different order.
+Shortly, your website is no more designed as a set of pages, but as a list of small and reusable blocks (components).
+In other words, your pages become "simply" compositions of these blocks, sorting them in different order.
 
-Components are not tied to specific page or subpage but should be reused throughout the whole website.
+Components are not tied to specific page or sub-page but should be reused throughout the whole website.
 
-If you're implementing a theme for a CMS, it's up to decide to use components to just build a "fixed" set of templates or use them to let the client build pages in a flexible sort-of-composer way:
+If you're implementing a theme for a CMS, it's up to you to decide to use components to just build a "fixed" set of templates or use them to let the client build pages in a flexible sort-of-composer way:
 you can use Paragraphs in Drupal, Matrix field in Craft CMS or Flexible Content field type of WordPress ACF Pro plugin just to cite a few.
 
 This is an example list of UI components:
@@ -24,25 +24,25 @@ This is an example list of UI components:
 - cards
 - cards-carousel
 
-The actual names of your components is up to you, designers and developers. They should be as more abstract as possible, but I suggest you to find a good compromise avoiding overthiking.
+The actual names of your components is up to you, designers and developers. They should be as more abstract as possible, but I suggest you to find a good compromise avoiding overthinking.
 
-As I said before, Componend-Based approach is not only a dev-tech-code thing, but it first involves designers.
+As I said before, Component-Based approach is not only a dev-tech-code thing, but it first involves designers.
 From the design point of view, **the best is to have a complete and clear collection of all components involved in the project, and then the actual design of pages**.
 
-As a developer you start coding first by building the collection of all components and then you go on building pages.
+As a developer you start coding first by building the collection of all components and then you can go on building pages.
 
 In my humble opinion this paradigm is amazing when working with a CMS since **it lets you write the frontend code you want detached from the underlying CMS, in a sort of decoupled way**: this way CMS becomes more your source of data rather then a magic box where your markup comes from.
 
-Yes, if you're used to just style the HTML coming from the default templates of your CMS, this approach is going aks you to write more html, in some cases lots of templates, but you'll have full control over it and it'll be easier to integrate 3rd party frontend libraries/components.
+Yes, if you're used to just style the HTML coming from the default templates of your CMS, this approach is going ask you to write more html, in some cases lots of templates (Drupal), but you'll have full control over it and it'll be easier to integrate 3rd party frontend libraries/components.
 
-Actual implementation details depend on the CMS you're building the frontend for, but more or less this is path for the win: **you first code the abstract components, then you attach dynamic data coming from the CMS and then you build the page**.
+Actual implementation details depend on the CMS you're building the frontend for, but more or less this is path for the win: **you first code the abstract components, then you connect dynamic data coming from the CMS to the components params/props, and then you build the page**.
 
 
 ## Why you should start using it
 Switching to a Component-Based Design and Development paradigm means:
 1. more collaboration between designers and developers at the early stages of the project;
 2. developers can concentrate on implementing pieces of UI unchained from the underlying CMS used: your frontend code is less dependant by the CMS, so you're free to use whatever markup/classes/architecture you want;
-4. you can implement a style guide shared between the team that can help a lot in terms of keeping consistency durint the project
+4. you can implement a style guide shared between the team that can help a lot in terms of keeping consistency during the project
 5. your client or content editor people will easily get one "flexible" page template rather than a set of prefixed page templates. I guess it's a great value added to the project in the sense that your clients will be able to build whatever kind of page they'd like in the future just using and rearranging the building blocks.
 
 
