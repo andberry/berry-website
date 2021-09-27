@@ -3,7 +3,7 @@ title: 'BEM, CSS Namespaces and ITCSS'
 abstract: "How to make frontend code more readable and maintaininable, because CSS is easy but looking after it is not"
 createdAt: 20210914
 createdAtDisplay: 'September 14, 2021'
-published: true
+published: false
 ---
 > because writing CSS is easy; looking after it is not.
 >
