@@ -37,9 +37,7 @@ function doOnDocumentLoaded () {
 }
 
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-        doOnDocumentLoaded()
-    });
+    document.addEventListener('DOMContentLoaded', doOnDocumentLoaded);
 } else {
     doOnDocumentLoaded();
 }
