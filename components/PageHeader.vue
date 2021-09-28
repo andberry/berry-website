@@ -28,7 +28,7 @@
                     </li>
                 </ul>
 
-                <div id="mobile-contacts" class="absolute inset-x-0 bottom-0 mb-8 flex justify-center self-end lg:hidden">
+                <div id="mobile-contacts" class="absolute inset-x-0 bottom-0 mb-8 flex justify-center items-center self-end lg:hidden">
                     <div class="contact contact--email w-8 mr-4">
                         <a :href="data.contactsLinks.email"><emailIcon /></a>
                     </div>
@@ -38,6 +38,9 @@
                     <div class="contact contact--twitter w-8 mr-4">
                         <a :href="data.contactsLinks.twitter" target="_blank"><twitterIcon /></a>
                     </div>
+                    <div class="contact contact--devto w-8 mr-4">
+                        <a :href="data.contactsLinks.devto" target="_blank"><devtoIcon /></a>
+                    </div>
                     <div class="contact contact--github w-8">
                         <a :href="data.contactsLinks.github" target="_blank"><githubIcon /></a>
                     </div>
@@ -46,7 +49,7 @@
         </div>
 
         <div class="flex relative z-40">
-            <div id="page-header-contacts" class="header__contacts hidden lg:flex">
+            <div id="page-header-contacts" class="header__contacts hidden lg:flex lg:items-center">
                 <div class="contact contact--email w-8 mr-4">
                     <a :href="data.contactsLinks.email"><emailIcon /></a>
                 </div>
@@ -55,6 +58,9 @@
                 </div>
                 <div class="contact contact--twitter w-8 mr-4">
                     <a :href="data.contactsLinks.twitter" target="_blank"><twitterIcon /></a>
+                </div>
+                <div class="contact contact--devto w-8 mr-4">
+                    <a :href="data.contactsLinks.devto" target="_blank"><devtoIcon /></a>
                 </div>
                 <div class="contact contact--github w-8">
                     <a :href="data.contactsLinks.github" target="_blank"><githubIcon /></a>
@@ -84,13 +90,15 @@ import twitterIcon from '~/assets/images/twitter1.svg?inline'
 import linkedinIcon from '~/assets/images/linkedin.svg?inline'
 import githubIcon from '~/assets/images/github.svg?inline'
 import emailIcon from '~/assets/images/email.svg?inline'
+import devtoIcon from '~/assets/images/devto.svg?inline'
 
 export default {
     components: {
         twitterIcon,
         linkedinIcon,
         githubIcon,
-        emailIcon
+        emailIcon,
+        devtoIcon
     },
 
     data () {
@@ -195,6 +203,14 @@ export default {
     }
     svg:hover{
         fill: theme('colors.lime');
+    }
+
+    .contact--devto svg {
+        fill: theme('colors.violet');
+
+        &:hover {
+            fill: theme('colors.lime');
+        }
     }
 
     #main-menu{
