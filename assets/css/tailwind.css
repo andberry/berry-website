@@ -240,7 +240,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
-
+/* syntax highlight */
 .hljs{
     @apply pt-2 !important;
     @apply pb-8 !important;
@@ -250,6 +250,15 @@ h1,h2,h3,h4,h5,h6 {
     @apply font-fontmono;
 }
 
+code[class*="language-"],
+pre[class*="language-"] {
+    text-shadow: none !important;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: none !important;
+}
 
 /*
     Skills
