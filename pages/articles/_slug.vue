@@ -60,10 +60,10 @@ export default {
     }
 
     .nuxt-content h2{
-        @apply text-4xl;
+        @apply text-5xl;
     }
 
     .nuxt-content h3{
-        @apply text-3xl;
+        @apply text-2xl;
     }
 </style>
