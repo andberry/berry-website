@@ -106,7 +106,7 @@ It helps us to **organize our CSS files** to better deal with CSS specifics/issu
 
 At the end, we split CSS properties based on their level of specificity and importance.
 
-![ITCSS](~/assets/images/itcss.svg)
+<img src="/images/itcss.svg" style="background-color: white; padding: 2rem; margin-bottom: 3rem;"/>
 
 Going from top to bottom symbolizes an increase in specificity, and each subsection of the triangle may be considered a separate file or group of files.
 
