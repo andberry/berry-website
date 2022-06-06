@@ -55,8 +55,10 @@
                         </h3>
                         <ul>
                             <li>Drupal</li>
-                            <li>WordPress</li>
+                            <li>Statamic</li>
+                            <li>11ty / Eleventy</li>
                             <li>Craft CMS</li>
+                            <li>WordPress</li>
                             <li>Nuxt.js</li>
                             <li>Django</li>
                         </ul>
