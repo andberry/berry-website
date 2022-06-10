@@ -56,7 +56,7 @@
                         <ul>
                             <li>Drupal</li>
                             <li>Statamic</li>
-                            <li>11ty / Eleventy</li>
+                            <li>11ty (Eleventy)</li>
                             <li>Craft CMS</li>
                             <li>WordPress</li>
                             <li>Nuxt.js</li>
@@ -72,10 +72,9 @@
                         </h3>
                         <ul>
                             <li>Git</li>
-                            <li>gulp.js</li>
-                            <li>rollup.js</li>
-                            <li>Parcel.js</li>
-                            <li>webpack</li>
+                            <li>gulp.js / rollup.js / Parcel.js</li>
+                            <li>Vagrant / Homestead</li>
+                            <li>Lando</li>
                         </ul>
                     </div>
                 </div>
@@ -89,7 +88,7 @@
                             <li>Responsive Web Design</li>
                             <li>Component-Based Dev</li>
                             <li>CSS: BEM, ITCSS, Namespaces</li>
-                            <li>Usability</li>
+                            <li>UI Usability</li>
                         </ul>
                     </div>
                 </div>
@@ -102,7 +101,7 @@
                         <ul>
                             <li>macOS</li>
                             <li>Linux</li>
-                            <li>Linux-based server setup (network services, LAMP, pm2)</li>
+                            <li>Linux-based server setup</li>
                             <li>Internet network infrastructure and services (IP, DNS, Web, Mail)</li>
                         </ul>
                     </div>
@@ -115,6 +114,7 @@
                         </h3>
                         <ul>
                             <li>Critical and creative thinker</li>
+                            <li>Proactive approach</li>
                             <li>Team building and leadership attitude</li>
                             <li>Work independently or as part of a team</li>
                             <li>Never stop learning attitude</li>
