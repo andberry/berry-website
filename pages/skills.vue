@@ -1,6 +1,6 @@
 <template>
     <article class="container mx-auto max-w-screen-xl pt-8 md:pt-16">
-        <h1 class="title--berry text-5xl lg:text-hero2 mb-8 lg:mb-16 relative overflow-hidden pb-4">
+        <h1 class="title--berry text-5xl lg:text-6xl mb-8 lg:mb-12 relative overflow-hidden pb-4">
             My Skills
         </h1>
 
@@ -15,7 +15,7 @@
                             <li>HTML5</li>
                             <li>CSS3, Sass/SCSS</li>
                             <li>JavaScript (ES6+)</li>
-                            <li>PHP, Twig</li>
+                            <li>PHP, Twig, Antlers</li>
                             <li>Python</li>
                         </ul>
                     </div>
@@ -28,9 +28,9 @@
                         </h3>
                         <ul>
                             <li>UIkit</li>
+                            <li>Tailwind CSS</li>
                             <li>Foundation</li>
                             <li>Bootstrap</li>
-                            <li>Tailwind CSS</li>
                         </ul>
                     </div>
                 </div>
@@ -41,7 +41,8 @@
                             Libraries
                         </h3>
                         <ul>
-                            <li>Vue.js</li>
+                            <li>Vue.js (Nuxt oriented)</li>
+                            <li>React (Next.js oriented)</li>
                             <li>GSAP</li>
                             <li>jQuery</li>
                         </ul>
@@ -55,11 +56,12 @@
                         </h3>
                         <ul>
                             <li>Drupal</li>
-                            <li>Statamic</li>
                             <li>11ty (Eleventy)</li>
+                            <li>Statamic</li>
                             <li>Craft CMS</li>
                             <li>WordPress</li>
-                            <li>Nuxt.js</li>
+                            <li>Nuxt</li>
+                            <li>Next.js</li>
                             <li>Django</li>
                         </ul>
                     </div>
@@ -72,7 +74,7 @@
                         </h3>
                         <ul>
                             <li>Git</li>
-                            <li>gulp.js / rollup.js / Parcel.js</li>
+                            <li>gulp.js / rollup.js</li>
                             <li>Vagrant / Homestead</li>
                             <li>Lando</li>
                         </ul>
@@ -88,7 +90,8 @@
                             <li>Responsive Web Design</li>
                             <li>Component-Based Dev</li>
                             <li>CSS: BEM, ITCSS, Namespaces</li>
-                            <li>UI Usability</li>
+                            <li>Basic UI Usability best practices</li>
+                            <li>Basic technical SEO best practices</li>
                         </ul>
                     </div>
                 </div>
@@ -172,5 +175,15 @@ export default {
     .skills-block li{
         opacity: 0;
         transform: translateY(15px);
+    }
+
+    .skills-block .block__title {
+        @apply font-righteous;
+        /* text-transform: uppercase; */
+    }
+
+    .skills-block li {
+        @apply font-righteous;
+        @apply font-exo2;
     }
 </style>

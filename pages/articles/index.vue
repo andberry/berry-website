@@ -1,13 +1,13 @@
 <template>
     <article class="container mx-auto max-w-screen-md pt-8 md:pt-16">
-        <h1 class="title--berry text-5xl lg:text-hero2 mb-16 lg:mb-32">
-            Berry's Articles
+        <h1 class="title--berry text-5xl lg:text-6xl mb-16 lg:mb-32">
+            Articles
         </h1>
 
         <div class="articles-lists">
             <div v-for="(post, key) in articles" :key="key" class="post mb-24 lg:mb-32">
-                <h2 class="post__title title--berry text-4xl mb-2">
-                    <nuxt-link :to="post.path" class="hover:text-lime block">
+                <h2 class="post__title title--berry text-4xl lg:text-5xl mb-2">
+                    <nuxt-link :to="post.path" class="hover:text-fuchsia400 block">
                         {{ post.title }}
                     </nuxt-link>
                 </h2>
@@ -24,13 +24,13 @@
                         <div
                             v-for="(tag, index) in post.tags"
                             :key="index"
-                            class="post-tag mr-2 text-xs leading-tight text-center bg-violet text-white px-2 py-1 rounded-sm"
+                            class="post-tag mr-2 text-sm leading-tight text-center bg-violet800 text-white px-2 py-1 rounded-sm"
                         >
                             {{ tag }}
                         </div>
                     </div>
 
-                    <nuxt-link :to="post.path" class="text-sm link--styled">
+                    <nuxt-link :to="post.path" class="text-md link--styled">
                         Read the Article
                     </nuxt-link>
                 </div>
@@ -79,3 +79,16 @@ export default {
 }
 
 </script>
+
+<style scoped>
+    /*
+    .post__abstract {
+        @apply font-belgrano;
+        font-size: 18px;
+    }
+    */
+
+    .post__createdat {
+        @apply text-fuchsia400;
+    }
+</style>

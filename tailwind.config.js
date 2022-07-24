@@ -27,13 +27,20 @@ module.exports = {
             'black-rgba-75': 'rgba(39, 39, 39, 0.75)',
             black2: '#333',
             red: '#FB0E1A',
-            transparent: 'rgba(0,0,0,0)'
+            transparent: 'rgba(0,0,0,0)',
+
+            fuchsia400: 'rgb(232 121 249)',
+            violet800: 'rgb(91 33 182)',
+            lime300: 'rgb(190 242 100)'
         },
 
         fontFamily: {
             exo2: ['"Exo 2"', 'sans-serif'],
             fontmono: ['"Courier Prime"', 'monospace'],
-            ubuntu: ['Ubuntu', 'sans-serif']
+            ubuntu: ['Ubuntu', 'sans-serif'],
+            belgrano: ['Belgrano', 'serif'],
+            faustina: ['Faustina', 'serif'],
+            righteous: ['Righteous', 'cursive']
             /* comfortaa: ['Comfortaa', 'cursive'], */
         },
 
@@ -45,13 +52,15 @@ module.exports = {
         extend: {
             fontSize: {
                 hero1: '2vw',
-                hero2: '5vw',
-                hero3: '6.5vw',
-                huge: '14vw'
+                hero2: '4.5vw',
+                hero3: '7vw',
+                hero4: '9vw',
+                huge: '14vw',
+                home: '1.5rem'
             },
 
             lineHeight: {
-                berry: 0.95
+                berry: 1
             },
 
             gridTemplateRows: {
