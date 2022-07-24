@@ -1,6 +1,6 @@
 
 <template>
-    <article class="article container mx-auto max-w-screen-lg pt-8 md:pt-16">
+    <article class="article container mx-auto max-w-screen-md pt-8 md:pt-16">
         <h1 class="article__title title--berry text-5xl lg:text-hero2 mb-4">
             {{ article.title }}
         </h1>
@@ -69,8 +69,6 @@ export default {
 
     .article__content {
         @apply font-exo2;
-        @apply font-belgrano;
-        font-size: 16px;
     }
 
     .article__createdat {
