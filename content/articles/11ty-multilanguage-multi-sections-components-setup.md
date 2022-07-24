@@ -1,5 +1,5 @@
 ---
-title: 'Eleventy (11ty) setup for multilingual component-based flexible pages (aka One Page Websites with i18n)'
+title: 'Eleventy (11ty) setup for multilingual component-based flexible pages'
 abstract: "How to setup Eleventy (11ty) static site generator to create landing pages or one page websites with page content splitted in serveral files using reusable UI components"
 createdAt: 20220311
 createdAtDisplay: 'March 11, 2022'
